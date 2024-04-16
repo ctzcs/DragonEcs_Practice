@@ -1,0 +1,7 @@
+﻿{
+  "player": {
+    "name": "Anna",
+    "health": 10,
+    "items": []
+  }
+}

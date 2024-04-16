@@ -1,0 +1,6 @@
+using DCFApixels.DragonECS;
+
+[System.Serializable]
+public struct #SCRIPTNAME#:IEcsComponent
+{
+}
