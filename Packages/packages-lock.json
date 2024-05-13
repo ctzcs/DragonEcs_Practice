@@ -5,7 +5,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "3b145b909c553ec84b01609e1c565230baac54cc"
+      "hash": "10b873ac3036fcacc1b13c4223f84ebcde3b5547"
     },
     "com.dcfa_pixels.dragonecs-auto_injections": {
       "version": "https://github.com/DCFApixels/DragonECS-AutoInjections.git",
@@ -14,7 +14,7 @@
       "dependencies": {
         "com.dcfa_pixels.dragonecs": "https://github.com/DCFApixels/DragonECS.git"
       },
-      "hash": "8f09c4c886d0e3851a8b82db01dd33af8d90d69d"
+      "hash": "64dcda0157307f012907042d68c4d28012fe3469"
     },
     "com.dcfa_pixels.dragonecs-unity": {
       "version": "https://github.com/DCFApixels/DragonECS-Unity.git",
@@ -23,7 +23,7 @@
       "dependencies": {
         "com.dcfa_pixels.dragonecs": "https://github.com/DCFApixels/DragonECS.git"
       },
-      "hash": "a5a6bb87f8da98bdceeda93976a8f1c4a1c019ba"
+      "hash": "e39646791a482ac44f0b98b9c58f10a02f7e18c4"
     },
     "com.unity.2d.animation": {
       "version": "9.0.4",
@@ -182,6 +182,15 @@
       "source": "registry",
       "dependencies": {
         "com.unity.test-framework": "1.1.9"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.inputsystem": {
+      "version": "1.7.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.uielements": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },

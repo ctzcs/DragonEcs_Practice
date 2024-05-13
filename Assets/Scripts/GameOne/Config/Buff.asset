@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d2b62f9703592042befb46ac1fee09c, type: 3}
+  m_Name: Buff
+  m_EditorClassIdentifier: 
+  _components:
+  - rid: 7039791662605533187
+  - rid: 7039791662605533186
+  references:
+    version: 2
+    RefIds:
+    - rid: 7039791662605533186
+      type: {class: BuffTemplate, ns: GameOne.Ecs, asm: Assembly-CSharp}
+      data:
+        component:
+          id: 
+          onload: 
+          onRemove: 
+    - rid: 7039791662605533187
+      type: {class: Buff_HealthModTemplate, ns: GameOne.Ecs, asm: Assembly-CSharp}
+      data:
+        component:
+          addHealth: 0
+          multiHealth: 0
+          addMaxHealth: 0
+          multiMaxHealth: 0
+          addMinHealth: 0
+          multiMinHealth: 0

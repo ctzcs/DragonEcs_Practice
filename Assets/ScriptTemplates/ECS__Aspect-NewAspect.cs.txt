@@ -1,0 +1,6 @@
+﻿using DCFApixels.DragonECS;
+
+//查询
+public class #SCRIPTNAME#:EcsAspect
+{
+}  
