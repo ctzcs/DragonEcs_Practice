@@ -1,6 +1,6 @@
 ﻿using DCFApixels.DragonECS;
 
-namespace GameOne
+namespace GameOne.Object
 {
     public interface IEcsConverter<out T>
     {

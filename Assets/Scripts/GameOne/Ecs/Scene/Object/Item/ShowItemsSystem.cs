@@ -1,8 +1,7 @@
-﻿
+﻿using Base;
 using DCFApixels.DragonECS;
-using GameOne.Ecs;
 
-namespace GameOne
+namespace GameOne.Ecs
 {
     public class ShowItemsSystem:IEcsRun
     {
@@ -19,8 +18,7 @@ namespace GameOne
                 }
                 for (int i = 0; i < item.itemIds.Count; i++)
                 {
-                    item.itemIds[i].Unpack(out int itemId,out EcsWorld world);
-                    string name = world.GetPool<Item>().Get(itemId).itemName;
+                    string name = item.itemIds[i].Read<Item>().itemName;
                     EcsDebug.Print($"player 拥有:{name}:{i}");
                     
                 }

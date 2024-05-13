@@ -13,7 +13,7 @@ namespace GameOne
         private EcsEventWorld _eventWorld;
         private EcsPipeline _pipline;
 
-        private EcsUpdateRunner _updateRunner;
+        /*private EcsUpdateRunner _updateRunner;*/
         
         private TimeService _timeService;
         private GameStateService _gameStateService;
@@ -50,20 +50,18 @@ namespace GameOne
             UnityDebugService.Activate();
             _timeService.fixedDeltaTime = 1f;
             //自定义的更新函数
-            _updateRunner = _pipline.GetRunnerInstance<EcsUpdateRunner>();
+            /*_updateRunner = _pipline.GetRunnerInstance<EcsUpdateRunner>();*/
         }
 
         private void Update()
         {
-            
-            /*_updateRunner.Update();*/
-            _pipline.Run();
             _timeService.elapsedTime += Time.deltaTime;
             if (_timeService.elapsedTime > _timeService.fixedDeltaTime)
             {
                 _pipline.FixedRun();
                 _timeService.elapsedTime -= _timeService.fixedDeltaTime ;
             }
+            _pipline.Run();
             
         }
 

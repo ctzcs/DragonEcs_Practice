@@ -5,7 +5,7 @@ namespace Base
 {
     [MetaTags(MetaTags.HIDDEN)]
     [MetaColor(MetaColor.Grey)]
-    public class DeleteOneFrameComponentSystem<TComponent> : IEcsRun, IEcsInject<EcsWorld>
+    public class DeleteOneFrameComponentSystem<TComponent> : IEcsFixedRunProcess, IEcsInject<EcsWorld>
         where TComponent : struct, IEcsComponent
     {
         public EcsPipeline pipeline { get; set; }
@@ -15,7 +15,7 @@ namespace Base
         }
         private readonly List<EcsWorld> _worlds = new List<EcsWorld>();
         public void Inject(EcsWorld obj) => _worlds.Add(obj);
-        public void Run()
+        public void FixedRun()
         {
             for (int i = 0, iMax = _worlds.Count; i < iMax; i++)
             {

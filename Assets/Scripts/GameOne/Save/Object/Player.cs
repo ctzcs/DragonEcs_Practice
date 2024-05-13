@@ -10,7 +10,7 @@ namespace GameOne.Object
     {
         public string name;
         public int health;
-        public List<Object.Item> items;
+        public List<Item> items;
 
         public Player()
         {

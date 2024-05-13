@@ -1,7 +1,7 @@
 ﻿using Base;
 using DCFApixels.DragonECS;
 
-namespace GameOne
+namespace GameOne.Ecs
 {
     public class ItemModule:IEcsModule
     {

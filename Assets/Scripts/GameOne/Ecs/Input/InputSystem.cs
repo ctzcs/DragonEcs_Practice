@@ -1,5 +1,4 @@
-﻿using Base;
-using DCFApixels.DragonECS;
+﻿using DCFApixels.DragonECS;
 using UnityEngine;
 
 namespace GameOne.Ecs.Input
@@ -18,8 +17,6 @@ namespace GameOne.Ecs.Input
             input.CheckList.Add(KeyCode.S);
             input.CheckList.Add(KeyCode.E);
             input.CheckList.Add(KeyCode.Space);
-            
-            
         }
         
         public void Run()

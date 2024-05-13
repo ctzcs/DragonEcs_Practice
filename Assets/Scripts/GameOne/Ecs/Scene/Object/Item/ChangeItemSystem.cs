@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
+using Base;
 using DCFApixels.DragonECS;
 
-namespace GameOne
+namespace GameOne.Ecs
 {
     public class ChangeItemSystem:IEcsFixedRunProcess
     {
@@ -14,27 +15,26 @@ namespace GameOne
         
         public void FixedRun()
         {
+            EcsPool<ItemBag> itemBagPool = _defaultWorld.GetPool<ItemBag>();
             foreach (var id in _eventWorld.Where(out ChangeItemAspect aspect))
             {
                 ChangeItemEvent changeItemEvent = aspect.changeItemEventPool.Get(id);
-                entlong whoEntLong = changeItemEvent.who;
-                entlong itemEntLong = changeItemEvent.item;
+                entlong whoEntity = changeItemEvent.who;
+                entlong itemEntity = changeItemEvent.item;
                 
-                whoEntLong.Unpack(out int whoId,out EcsWorld whoWorld);
-                if (!whoWorld.GetPool<ItemBag>().Has(whoId))
+                if (!whoEntity.Has(itemBagPool))
                 {
                     continue;
                 }
 
-                ItemBag itemBag = whoWorld.GetPool<ItemBag>().Get(whoId);
-                
+                ref ItemBag itemBag = ref whoEntity.Get(itemBagPool);
                 switch (changeItemEvent.operation)
                 {
                     case ChangeItemEvent.EAddOrRemove.Add:
-                        AddItem(itemBag.itemIds,itemEntLong);
+                        AddItem(itemBag.itemIds,itemEntity);
                         break;
                     case ChangeItemEvent.EAddOrRemove.Remove:
-                        RemoveItem(itemBag.itemIds,itemEntLong);
+                        RemoveItem(itemBag.itemIds,itemEntity);
                         break;
                 }
                 

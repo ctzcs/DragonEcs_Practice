@@ -1,8 +1,4 @@
-﻿using DCFApixels.DragonECS;
-using GameOne;
-using GameOne.Object;
-
-namespace Object
+﻿namespace GameOne.Object
 {
     public class Save
     {
