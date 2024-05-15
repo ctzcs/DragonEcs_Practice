@@ -1,5 +1,6 @@
-
+using System;
 using DCFApixels.DragonECS;
+using GameOne.Ecs;
 
 namespace Base
 {
@@ -12,10 +13,17 @@ namespace Base
             return ref world.GetPool<TComponent>().Get(id);
         }
         
-        public static ref TComponent Add<TComponent>(this entlong entity) where TComponent : struct, IEcsComponent
+        public static void Add<TComponent>(this entlong entity,ref TComponent component) where TComponent : struct, IEcsComponent
         {
             entity.Unpack(out int id,out EcsWorld world);
-            return ref world.GetPool<TComponent>().Add(id);
+            ref var poolComponent = ref world.GetPool<TComponent>().Add(id);
+            poolComponent = component;
+        }
+
+        public static ref TComponent TryGetOrAdd<TComponent>(this entlong entity) where TComponent : struct, IEcsComponent
+        {
+            entity.Unpack(out int id,out EcsWorld world);
+            return ref world.GetPool<TComponent>().TryAddOrGet(id);
         }
         
         public static void Del<TComponent>(this entlong entity) where TComponent : struct, IEcsComponent
@@ -43,15 +51,20 @@ namespace Base
             return ref pool.Get(entity.ID);
         }
         
-        public static ref TComponent Add<TComponent>(this entlong entity,EcsPool<TComponent> pool) where TComponent : struct, IEcsComponent
+        public static ref TComponent TryGetOrAdd<TComponent>(this entlong entity,EcsPool<TComponent> pool) where TComponent : struct, IEcsComponent
         {
-            return ref pool.Add(entity.ID);
+            return ref pool.TryAddOrGet(entity.ID);
+        }
+        
+        public static void Add<TComponent>(this entlong entity,EcsPool<TComponent> pool,ref TComponent component) where TComponent : struct, IEcsComponent
+        {
+            ref var poolComponent = ref pool.Add(entity.ID);
+            poolComponent = component;
         }
         
         public static void Del<TComponent>(this entlong entity,EcsPool<TComponent> pool) where TComponent : struct, IEcsComponent
         {
-            entity.Unpack(out int id,out EcsWorld world);
-            pool.Del(id);
+            pool.Del(entity.ID);
         }
         
         public static bool Has<TComponent>(this entlong entity,EcsPool<TComponent> pool) where TComponent : struct, IEcsComponent
@@ -107,5 +120,10 @@ namespace Base
         #endregion
         
         
+
+        
     }
+        
+       
 }
+

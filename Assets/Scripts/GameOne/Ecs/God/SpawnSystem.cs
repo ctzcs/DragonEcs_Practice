@@ -13,11 +13,13 @@ namespace GameOne.Ecs
         {
             EcsDebug.Print("SpawnSystem==>Init");
             
+            //将GameObject和Ecs链接
             EcsEntityConnect connect = UnityEngine.Object.Instantiate(UnityEngine.Resources.Load<GameObject>("Entity"))
                 .GetComponent<EcsEntityConnect>();
             //添加组件
             var e = _world.NewEntity();
             var elong = _world.GetEntityLong(e);
+            //
             connect.ConnectWith(elong,false);
             _healthPool = _world.GetPool<Health>();
             ref var health = ref _healthPool.Add(e);
@@ -35,8 +37,8 @@ namespace GameOne.Ecs
             diffLogicComponent.logic = "Hello";
             
             _world.GetTagPool<PlayerTag>().Add(e);
-            ref ItemBag bag = ref _world.GetPool<ItemBag>().Add(e);
-            bag.itemIds = new List<entlong>();
+            ref ItemContainer container = ref _world.GetPool<ItemContainer>().Add(e);
+            container.itemIds = new List<entlong>();
         }
         
         public void FixedRun()

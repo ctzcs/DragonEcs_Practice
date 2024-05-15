@@ -36,10 +36,8 @@ namespace GameOne
                 .Inject(_gameStateService)
                 .AddModule(new InputModule())
                 .AddModule(new GodModule())
-                .AddModule(new MapModule())
-                .AddModule(new HealthModule())
-                .AddModule(new ItemModule())
-                .AddModule(new BuffModule())
+                .AddModule(new SceneModule())
+                .AddModule(new GameAbilityModule())
 #if UNITY_EDITOR
                 .AddModule(new UniTestModule())
 #endif

@@ -1,12 +1,12 @@
-﻿
+﻿using System;
 using System.Collections.Generic;
 using DCFApixels.DragonECS;
 
-namespace GameOne
+namespace GameOne.Ecs
 {
-    public struct ItemBag:IEcsComponent
+    [Serializable]
+    public struct ItemContainer:IEcsComponent
     {
-        
         public List<entlong> itemIds;
     }
 }

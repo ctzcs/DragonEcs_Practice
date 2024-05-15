@@ -29,9 +29,9 @@ namespace GameOne.Object
             entityId.Unpack(out int id, out EcsWorld world);
             name = world.GetPool<Name>().Read(id).name;
             health = world.GetPool<Health>().Read(id).healthValue;
-            if (world.GetPool<ItemBag>().Has(id))
+            if (world.GetPool<ItemContainer>().Has(id))
             {
-                var itemIds = world.GetPool<ItemBag>().Read(id).itemIds;
+                var itemIds = world.GetPool<ItemContainer>().Read(id).itemIds;
                 foreach (var itemLongId in itemIds)
                 {
                     var itemId = itemLongId.ID;

@@ -8,7 +8,7 @@ namespace GameOne.Ecs
         public void Import(EcsPipeline.Builder b)
         {
             b.Add(new AddBuffSystem(), EcsConsts.BASIC_LAYER);
-
+            
             b.AutoDel<RefreshBuffPropertyEvent>();
         }
     }

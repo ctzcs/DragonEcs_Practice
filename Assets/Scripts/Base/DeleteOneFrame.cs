@@ -8,6 +8,8 @@ namespace Base
     public class DeleteOneFrameComponentSystem<TComponent> : IEcsFixedRunProcess, IEcsInject<EcsWorld>
         where TComponent : struct, IEcsComponent
     {
+        
+        
         public EcsPipeline pipeline { get; set; }
         private sealed class Aspect : EcsAspect
         {

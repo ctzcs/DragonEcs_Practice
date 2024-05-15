@@ -2,6 +2,7 @@
 using Base;
 using DCFApixels.DragonECS;
 
+
 namespace GameOne.Ecs
 {
     public class ChangeItemSystem:IEcsFixedRunProcess
@@ -15,7 +16,7 @@ namespace GameOne.Ecs
         
         public void FixedRun()
         {
-            EcsPool<ItemBag> itemBagPool = _defaultWorld.GetPool<ItemBag>();
+            EcsPool<ItemContainer> itemBagPool = _defaultWorld.GetPool<ItemContainer>();
             foreach (var id in _eventWorld.Where(out ChangeItemAspect aspect))
             {
                 ChangeItemEvent changeItemEvent = aspect.changeItemEventPool.Get(id);
@@ -27,14 +28,14 @@ namespace GameOne.Ecs
                     continue;
                 }
 
-                ref ItemBag itemBag = ref whoEntity.Get(itemBagPool);
+                ref ItemContainer itemContainer = ref whoEntity.Get(itemBagPool);
                 switch (changeItemEvent.operation)
                 {
                     case ChangeItemEvent.EAddOrRemove.Add:
-                        AddItem(itemBag.itemIds,itemEntity);
+                        AddItem(itemContainer.itemIds,itemEntity);
                         break;
                     case ChangeItemEvent.EAddOrRemove.Remove:
-                        RemoveItem(itemBag.itemIds,itemEntity);
+                        RemoveItem(itemContainer.itemIds,itemEntity);
                         break;
                 }
                 
