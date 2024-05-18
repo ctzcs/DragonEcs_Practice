@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using DCFApixels.DragonECS;
 using GameOne.Ecs;
 using Newtonsoft.Json;
+using Name = GameOne.Ecs.Name;
 
 namespace GameOne.Object
 {

@@ -35,9 +35,7 @@ namespace GameOne
                 .Inject(_timeService)
                 .Inject(_gameStateService)
                 .AddModule(new InputModule())
-                .AddModule(new GodModule())
-                .AddModule(new SceneModule())
-                .AddModule(new GameAbilityModule())
+                .AddModule(new GameModule())
 #if UNITY_EDITOR
                 .AddModule(new UniTestModule())
 #endif

@@ -10,7 +10,7 @@ using Application = UnityEngine.Device.Application;
 
 namespace GameOne
 {
-    public class SaveSystem:IEcsRun
+    public class SaveSystem:IEcsFixedRunProcess
     {
         [EcsInject] private EcsDefaultWorld _world;
         [EcsInject] private TimeService _timeService;
@@ -20,7 +20,7 @@ namespace GameOne
             public EcsTagPool<PlayerTag> playerTags = Inc;
             public EcsPool<Health> playerHealths = Inc;
         }
-        public void Run()
+        public void FixedRun()
         {
             if (_gameStateService.state == EGameState.Saving)
             {

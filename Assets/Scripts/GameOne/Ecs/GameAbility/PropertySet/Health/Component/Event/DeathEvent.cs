@@ -4,7 +4,7 @@ namespace GameOne.Ecs
 {
     public struct DeathEvent:IEcsComponent
     {
-        public entlong who;
+        public entlong whoEntl;
         public string name;
     }
 }

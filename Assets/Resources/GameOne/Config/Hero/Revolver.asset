@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d2b62f9703592042befb46ac1fee09c, type: 3}
-  m_Name: Revovler
+  m_Name: Revolver
   m_EditorClassIdentifier: 
   _components:
+  - rid: 7039791822519402848
   - rid: 7039791676545564674
   - rid: 7039791676545564673
   references:
@@ -26,3 +27,8 @@ MonoBehaviour:
       data:
         component:
           name: Revovler
+    - rid: 7039791822519402848
+      type: {class: CarryBuffsTemplate, ns: GameOne.Ecs, asm: Assembly-CSharp}
+      data:
+        component:
+          buffs: []

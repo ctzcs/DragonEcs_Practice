@@ -14,10 +14,10 @@ namespace GameOne.Ecs
             EcsDebug.Print("SpawnSystem==>Init");
             
             //将GameObject和Ecs链接
-            EcsEntityConnect connect = UnityEngine.Object.Instantiate(UnityEngine.Resources.Load<GameObject>("Entity"))
+            EcsEntityConnect connect = UnityEngine.Object.Instantiate(Resources.Load<GameObject>("Entity"))
                 .GetComponent<EcsEntityConnect>();
             //添加组件
-            var e = _world.NewEntity();
+            var e = _world.NewEntity(Base.Template.Copy(Resources.Load<ScriptableEntityTemplate>("GameOne/Config/Hero/Revolver")));
             var elong = _world.GetEntityLong(e);
             //
             connect.ConnectWith(elong,false);
@@ -28,15 +28,11 @@ namespace GameOne.Ecs
             health.maxHealthValue = 10;
 
             //添加组件
-            _namePool = _world.GetPool<Name>();
-            ref var nameComponent = ref _namePool.Add(e);
-            nameComponent.name = "Anna";
-
+            
             var logicPool = _world.GetPool<DiffLogic>();
             ref var diffLogicComponent = ref logicPool.Add(e);
             diffLogicComponent.logic = "Hello";
             
-            _world.GetTagPool<PlayerTag>().Add(e);
             ref ItemContainer container = ref _world.GetPool<ItemContainer>().Add(e);
             container.itemIds = new List<entlong>();
         }

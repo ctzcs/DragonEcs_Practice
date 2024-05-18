@@ -1,25 +1,33 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using DCFApixels.DragonECS;
+using UnityEngine.Serialization;
 
 namespace GameOne.Ecs
 {
-    [System.Serializable]
+    [Serializable]
+    [MetaGroup("GameOne/BuffModule/")]
     public partial struct CarryBuffs:IEcsComponent
     {
-        public List<entlong> buffs;
+        public List<entlong> buffEntlList;
     }
 
+
+    [Serializable]
+    class CarryBuffsTemplate : ComponentTemplate<CarryBuffs>
+    {
+    }
 
     public partial struct CarryBuffs
     {
         public void AddBuff(entlong id)
         {
-            buffs.Add(id);
+            buffEntlList.Add(id);
         }
 
         public void RemoveBuff(entlong id)
         {
-            buffs.Remove(id);
+            buffEntlList.Remove(id);
         }
     }
 }

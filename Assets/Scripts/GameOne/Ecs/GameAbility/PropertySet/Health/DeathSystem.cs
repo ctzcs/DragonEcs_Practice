@@ -17,8 +17,8 @@ namespace GameOne.Ecs
             {
                var deathEvent = aspect.DeathEvents.Get(id);
                EcsDebug.Print($"{deathEvent.name} Death");
-               int entityId = deathEvent.who.ID;
-               EcsWorld world = EcsWorld.GetWorld(deathEvent.who.WorldID);
+               int entityId = deathEvent.whoEntl.ID;
+               EcsWorld world = EcsWorld.GetWorld(deathEvent.whoEntl.WorldID);
                world.TryDelEntity(entityId);
                //销毁该Object
                UnityEngine.Object.Destroy(world.GetPool<GameObjectConnect>().Get(entityId).Connect.gameObject);

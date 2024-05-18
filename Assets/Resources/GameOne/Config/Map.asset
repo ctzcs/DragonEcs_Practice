@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Map
   m_EditorClassIdentifier: 
   _components:
+  - rid: 7039791810696708097
   - rid: 7039791676545564672
   references:
     version: 2
@@ -23,3 +24,6 @@ MonoBehaviour:
         component:
           width: 10
           height: 10
+    - rid: 7039791810696708097
+      type: {class: MapTagTemplate, ns: GameOne.Ecs, asm: Assembly-CSharp}
+      data: {}

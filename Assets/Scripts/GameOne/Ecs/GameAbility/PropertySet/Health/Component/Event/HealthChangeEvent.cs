@@ -7,11 +7,11 @@ namespace GameOne.Ecs
         /// <summary>
         /// 伤害来源
         /// </summary>
-        public entlong fromEntity;
+        public entlong fromEntl;
         /// <summary>
         /// 伤害目标
         /// </summary>
-        public entlong toEntity;
+        public entlong toEntl;
 
         /// <summary>
         /// 伤害值/治疗值

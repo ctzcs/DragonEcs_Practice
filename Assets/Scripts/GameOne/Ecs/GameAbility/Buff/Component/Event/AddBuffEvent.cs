@@ -4,8 +4,8 @@ namespace GameOne.Ecs
 {
     public struct AddBuffEvent : IEcsComponent 
     {
-        public entlong from;
-        public entlong to;
-        public entlong buffEntity;
+        public entlong fromEntl;
+        public entlong toEntl;
+        public entlong buffEntl;
     }
 }

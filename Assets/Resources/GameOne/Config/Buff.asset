@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Buff
   m_EditorClassIdentifier: 
   _components:
+  - rid: 7039791835571028944
+  - rid: 7039791822519402719
+  - rid: 7039791822519402718
   - rid: 7039791662605533187
   - rid: 7039791662605533186
   references:
@@ -23,15 +26,28 @@ MonoBehaviour:
       data:
         component:
           id: 
-          onload: 
-          onRemove: 
     - rid: 7039791662605533187
       type: {class: Buff_HealthModTemplate, ns: GameOne.Ecs, asm: Assembly-CSharp}
       data:
         component:
           addHealth: 0
           multiHealth: 0
-          addMaxHealth: 0
+          addMaxHealth: 1
           multiMaxHealth: 0
           addMinHealth: 0
           multiMinHealth: 0
+    - rid: 7039791822519402718
+      type: {class: BuffOnRemoveTemplate, ns: GameOne.Ecs, asm: Assembly-CSharp}
+      data:
+        component:
+          funcName: PrintRemoveBuff
+    - rid: 7039791822519402719
+      type: {class: BuffOnAddTemplate, ns: GameOne.Ecs, asm: Assembly-CSharp}
+      data:
+        component:
+          funcName: PrintAddBuff
+    - rid: 7039791835571028944
+      type: {class: LastRoundTemplate, ns: GameOne.Ecs, asm: Assembly-CSharp}
+      data:
+        component:
+          round: 0

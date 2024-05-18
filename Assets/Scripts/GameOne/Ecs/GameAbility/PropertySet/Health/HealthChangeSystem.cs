@@ -23,7 +23,7 @@ namespace GameOne.Ecs
             foreach (var id in _world.Where(out DamageEventAspect damageEventAspect))
             {
                ref HealthChangeEvent healthChangeEvent = ref damageEventAspect.DamageEventPool.Get(id);
-               int targetId = healthChangeEvent.toEntity.ID;
+               int targetId = healthChangeEvent.toEntl.ID;
                
                if (healthAspect.HealthPool.Has(targetId))
                {

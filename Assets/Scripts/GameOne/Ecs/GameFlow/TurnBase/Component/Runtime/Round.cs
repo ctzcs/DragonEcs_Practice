@@ -1,11 +1,10 @@
 using DCFApixels.DragonECS;
 
-namespace GameTwo
+namespace GameOne.Ecs
 {
     [System.Serializable]
     public struct Round:IEcsComponent
     {
         public int roundCount;
-        
     }
 }

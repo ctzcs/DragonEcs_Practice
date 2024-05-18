@@ -3,7 +3,7 @@ using DCFApixels.DragonECS;
 
 namespace GameOne.Ecs
 {
-    [MetaGroup("GameOne/BuffModule/Tag/")]
+    [MetaGroup("GameOne/BuffModule/PropertyMod/")]
     [Serializable]
     public struct CantBeHurtTag : IEcsTagComponent
     {

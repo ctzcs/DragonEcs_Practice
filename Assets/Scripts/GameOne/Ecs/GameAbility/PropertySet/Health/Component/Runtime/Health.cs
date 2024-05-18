@@ -23,7 +23,7 @@ namespace GameOne.Ecs
         public int multiMaxHealth;
     }
     
-    public partial struct Health:IAddable<Buff_HealthMod>
+    public partial struct Health:IAddable<Buff_HealthMod>,ISubtract<Buff_HealthMod>
     {
         public void Add(Buff_HealthMod other)
         {
@@ -34,6 +34,18 @@ namespace GameOne.Ecs
             multiMaxHealth += other.multiMaxHealth;
             
             addMinHealth += other.addMinHealth;
+            multiMinHealth += other.multiMinHealth;
+        }
+
+        public void Subtract(Buff_HealthMod other)
+        {
+            addHealth -= other.addHealth;
+            multiHealth -= other.multiHealth;
+            
+            addMaxHealth -= other.addMaxHealth;
+            multiMaxHealth -= other.multiMaxHealth;
+            
+            addMinHealth -= other.addMinHealth;
             multiMinHealth += other.multiMinHealth;
         }
     }
