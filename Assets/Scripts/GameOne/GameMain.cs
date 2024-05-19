@@ -1,7 +1,7 @@
-using Base;
 using DCFApixels.DragonECS;
 using GameOne.Ecs;
 using GameOne.Ecs.Input;
+using GameOne.Ecs.Process;
 using GameOne.Ecs.UnitTest;
 using UnityEngine;
 
@@ -14,7 +14,7 @@ namespace GameOne
         private EcsPipeline _pipline;
 
         /*private EcsUpdateRunner _updateRunner;*/
-        
+        private TurnBasedProcessRunner _turnBasedRunner;
         private TimeService _timeService;
         private GameStateService _gameStateService;
         private float _elapsedTime;
@@ -37,22 +37,23 @@ namespace GameOne
                 .AddModule(new InputModule())
                 .AddModule(new GameModule())
 #if UNITY_EDITOR
-                .AddModule(new UniTestModule())
+                .AddModule(new UnitTestModule())
 #endif
                 .AddUnityDebug(_world,_eventWorld)
                 .AutoInject()
                 .BuildAndInit();
             
             UnityDebugService.Activate();
-            _timeService.fixedDeltaTime = 1f;
+            _timeService.fixedDeltaTime = 0.05f;
             //自定义的更新函数
+            _turnBasedRunner = _pipline.GetRunnerInstance<TurnBasedProcessRunner>();
             /*_updateRunner = _pipline.GetRunnerInstance<EcsUpdateRunner>();*/
         }
 
         private void Update()
         {
             _timeService.elapsedTime += Time.deltaTime;
-            if (_timeService.elapsedTime > _timeService.fixedDeltaTime)
+            while (_timeService.elapsedTime > _timeService.fixedDeltaTime)
             {
                 _pipline.FixedRun();
                 _timeService.elapsedTime -= _timeService.fixedDeltaTime ;
@@ -60,6 +61,17 @@ namespace GameOne
             _pipline.Run();
             
         }
+
+        /// <summary>
+        /// 根据计算跑一回合
+        /// </summary>
+        public void RunOneTurn()
+        {
+            //跑一回合
+            _turnBasedRunner.RunTurn();
+        }
+        
+        
 
         
        

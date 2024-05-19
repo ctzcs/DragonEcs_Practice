@@ -23,7 +23,7 @@
       "dependencies": {
         "com.dcfa_pixels.dragonecs": "https://github.com/DCFApixels/DragonECS.git"
       },
-      "hash": "69f633da06c3c16c6e2cdfdfb173a768ad1f19ec"
+      "hash": "990f3adda6a1537a383cce9682985765576c8e38"
     },
     "com.unity.2d.animation": {
       "version": "9.0.4",

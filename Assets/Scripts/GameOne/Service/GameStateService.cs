@@ -1,12 +1,10 @@
-using Base;
-using DCFApixels;
 
 namespace GameOne
 {
     public class GameStateService
     {
         public EGameState state;
-        
+        public ETurn turn;
     }
 
 
@@ -16,5 +14,18 @@ namespace GameOne
         Play,
         Saving,
         Loading,
+    }
+    
+    public enum ETurn
+    {
+        None,
+        RoundStart,
+        Terrain,
+        EnemyAI,
+        WaitForPlayerInput,
+        PlayerAction,
+        EnemyAction,
+        RoundEnd,
+        
     }
 }

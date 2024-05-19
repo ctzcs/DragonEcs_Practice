@@ -2,7 +2,7 @@
 
 namespace GameOne.Ecs.UnitTest
 {
-    public class UniTestModule:IEcsModule
+    public class UnitTestModule:IEcsModule
     {
         public void Import(EcsPipeline.Builder b)
         {
