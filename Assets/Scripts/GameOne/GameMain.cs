@@ -48,6 +48,8 @@ namespace GameOne
             //自定义的更新函数
             _turnBasedRunner = _pipline.GetRunnerInstance<TurnBasedProcessRunner>();
             /*_updateRunner = _pipline.GetRunnerInstance<EcsUpdateRunner>();*/
+            
+            ChangeTurnEvent.ChangeTurn(_eventWorld,ETurn.RoundStart);
         }
 
         private void Update()

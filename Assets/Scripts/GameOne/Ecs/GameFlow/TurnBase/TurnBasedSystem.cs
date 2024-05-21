@@ -1,5 +1,4 @@
-﻿using Base;
-using DCFApixels.DragonECS;
+﻿using DCFApixels.DragonECS;
 using UnityEngine;
 
 namespace GameOne.Ecs
@@ -24,15 +23,14 @@ namespace GameOne.Ecs
         {
             foreach (var roundStart in _eWorld.Where(out Aspect aspect))
             {
-                StartTurn();
+                CheckTurn();
             }
         }
 
-        void StartTurn()
+        void CheckTurn()
         {
             _main.RunOneTurn();
-            //发出更改turn事件
-            _eWorld.NewEntityLong().TryGetOrAdd<ChangeTurnEvent>().toTurn = ETurn.RoundEnd;
+            
         }
 
         

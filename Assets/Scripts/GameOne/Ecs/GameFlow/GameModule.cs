@@ -1,4 +1,5 @@
-﻿using DCFApixels.DragonECS;
+﻿using Base;
+using DCFApixels.DragonECS;
 
 namespace GameOne.Ecs
 {
@@ -6,11 +7,16 @@ namespace GameOne.Ecs
     {
         public void Import(EcsPipeline.Builder b)
         {
-            b.Add(new TurnBasedSystem(), EcsConsts.BEGIN_LAYER)
-                .Add(new LastRoundChangeWhenRoundEndSystem(),EcsConsts.BASIC_LAYER)
+            b.Add(new ChangeTurnSystem())
+                .Add(new TurnBasedSystem())
+                .Add(new RoundStartSystem())
+                .Add(new LastRoundChangeWhenRoundEndSystem())
+                .AutoDel<RoundEndEvent>()
+                .AutoDel<RoundStartEvent>()
+                .AutoDel<ChangeTurnEvent>()
                 .AddModule(new GodModule())
-                .AddModule(new SceneModule())
-                .AddModule(new GameAbilityModule());
+                .AddModule(new SceneModule());
+            //.AddModule(new GameAbilityModule());
         }
     }
 }

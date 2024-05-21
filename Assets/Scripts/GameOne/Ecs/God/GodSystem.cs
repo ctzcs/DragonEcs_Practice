@@ -27,7 +27,7 @@ namespace GameOne.Ecs
         
         public void FixedRun()
         {
-            Debug.Log("GodSystem==>Update");
+            EcsDebug.Print("GodSystem==>Update");
 
             ref WorldInput worldInput = ref _world.Get<WorldInput>();
             

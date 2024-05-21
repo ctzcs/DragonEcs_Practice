@@ -5,9 +5,9 @@ namespace GameOne.Ecs
 {
     public class ChangeTurnSystem : IEcsFixedRunProcess
     {
-        [EcsInject] EcsDefaultWorld _world;
-        [EcsInject]private EcsEventWorld _eWorld;
-        [EcsInject] private GameStateService _gameState;
+        [EcsInject]EcsDefaultWorld _world;
+        [EcsInject]EcsEventWorld _eWorld;
+        [EcsInject]GameStateService _gameState;
 
         class Aspect:EcsAspect
         {
@@ -30,17 +30,19 @@ namespace GameOne.Ecs
                 }
             }
         }
+
+        
         
         void RoundStart()
         {
             var e= _eWorld.NewEntityLong();
-            e.TryGetOrAdd<ChangeTurnEvent>().toTurn = ETurn.RoundStart;
+            e.TryGetOrAdd<RoundStartEvent>();
         }
         
         void RoundEnd()
         {
             var e= _eWorld.NewEntityLong();
-            e.TryGetOrAdd<ChangeTurnEvent>().toTurn = ETurn.RoundEnd;
+            e.TryGetOrAdd<RoundEndEvent>();
         }
     }
 }
