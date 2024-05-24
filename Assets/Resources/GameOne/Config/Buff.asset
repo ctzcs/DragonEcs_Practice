@@ -50,4 +50,4 @@ MonoBehaviour:
       type: {class: LastRoundTemplate, ns: GameOne.Ecs, asm: Assembly-CSharp}
       data:
         component:
-          round: 0
+          round: 1

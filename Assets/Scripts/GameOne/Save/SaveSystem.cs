@@ -5,7 +5,6 @@ using DCFApixels.DragonECS;
 using GameOne.Ecs;
 using GameOne.Object;
 using Newtonsoft.Json;
-using Application = UnityEngine.Device.Application;
 
 
 namespace GameOne
@@ -43,7 +42,7 @@ namespace GameOne
             try
             {
                 string txt = JsonConvert.SerializeObject(save, Formatting.Indented);
-                string path = Path.Combine(Application.dataPath + "/../Save");
+                string path = Path.Combine(UnityEngine.Application.dataPath + "/../Save");
                 if (!Directory.Exists(path))
                 {
                     Directory.CreateDirectory(path);

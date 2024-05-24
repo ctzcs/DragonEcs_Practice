@@ -7,12 +7,12 @@ namespace GameOne.Ecs
     {
         public void Import(EcsPipeline.Builder b)
         {
-            b.Add(new HealthChangeSystem(), EcsConsts.BASIC_LAYER)
+            b.Add(new HealthChangeSystem())
                 //被buff系统影响
                 .Add(new RefreshPropertyInfluenceByBuffSystem<Health, Buff_HealthMod>(), EcsConsts.END_LAYER)
                 .Add(new ShowHpSystem(),EcsConsts.END_LAYER)
-                .Add(new DeathSystem(), EcsConsts.POST_END_LAYER);
-            b.AutoDel<DeathEvent>();
+                .Add(new DeathSystem(), EcsConsts.POST_END_LAYER)
+                .AutoDel<DeathEvent>();
             
                 
         }

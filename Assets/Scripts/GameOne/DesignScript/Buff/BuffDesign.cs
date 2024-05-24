@@ -1,11 +1,13 @@
 ﻿using System.Collections.Generic;
+using Base;
 using DCFApixels.DragonECS;
+using GameOne.Ecs;
 
 namespace GameOne.DesignScript.Buff
 {
     #region 委托
-    public delegate void BuffOnAdd();
-    public delegate void BuffOnRemove();
+    public delegate void BuffOnAdd(EcsDefaultWorld world,int addTo);
+    public delegate void BuffOnRemove(EcsDefaultWorld world,int removeFrom);
     #endregion
     public class BuffDesign
     {
@@ -27,18 +29,31 @@ namespace GameOne.DesignScript.Buff
         #region Private
 
         #region OnAdd
-        static void BuffOnAdd_PrintAddBuff()
+        static void BuffOnAdd_PrintAddBuff(EcsDefaultWorld world,int addTo)
         {
-            EcsDebug.Print("AddBuff,Happy!");
+            var namePool = world.GetPool<Name>();
+            if (addTo.Has(namePool))
+            {
+                ref readonly var name = ref addTo.Read(namePool);
+                EcsDebug.Print($"AddBuff >> {name.name} !");
+            }
+            
+            
         }
         
 
         #endregion
 
         #region OnRemove
-        static void BuffOnRemove_PrintRemoveBuff()
+        static void BuffOnRemove_PrintRemoveBuff(EcsDefaultWorld world,int removeFrom)
         {
-            EcsDebug.Print("RemoveBuff,Sad!");
+            var namePool = world.GetPool<Name>();
+            if (removeFrom.Has(namePool))
+            {
+                ref readonly var name = ref removeFrom.Read(namePool);
+                EcsDebug.Print($"RemoveBuff << {name.name}!");
+            }
+            
         }
         
 

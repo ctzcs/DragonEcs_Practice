@@ -9,6 +9,7 @@ namespace GameOne.Ecs
         {
             b.Add(new RemoveBuffSystem(),EcsConsts.BASIC_LAYER)
                 .Add(new AddBuffSystem(), EcsConsts.BASIC_LAYER)
+                //.AutoDel<AddBuffEvent>()
                 .AutoDel<RefreshBuffPropertyEvent>();
         }
     }

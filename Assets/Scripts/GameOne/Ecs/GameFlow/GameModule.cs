@@ -15,8 +15,8 @@ namespace GameOne.Ecs
                 .AutoDel<RoundStartEvent>()
                 .AutoDel<ChangeTurnEvent>()
                 .AddModule(new GodModule())
-                .AddModule(new SceneModule());
-            //.AddModule(new GameAbilityModule());
+                .AddModule(new SceneModule())
+                .AddModule(new GameAbilityModule());
         }
     }
 }

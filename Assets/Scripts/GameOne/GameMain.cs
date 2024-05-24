@@ -44,7 +44,7 @@ namespace GameOne
                 .BuildAndInit();
             
             UnityDebugService.Activate();
-            _timeService.fixedDeltaTime = 0.05f;
+            _timeService.fixedDeltaTime = 1f;
             //自定义的更新函数
             _turnBasedRunner = _pipline.GetRunnerInstance<TurnBasedProcessRunner>();
             /*_updateRunner = _pipline.GetRunnerInstance<EcsUpdateRunner>();*/

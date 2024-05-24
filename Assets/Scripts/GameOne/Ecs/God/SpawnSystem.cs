@@ -39,7 +39,6 @@ namespace GameOne.Ecs
         
         public void FixedRun()
         {
-            Debug.Log("SpawnSystem==>Update"); 
         }
         
     }

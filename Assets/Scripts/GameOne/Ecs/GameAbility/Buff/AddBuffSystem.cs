@@ -41,7 +41,7 @@ namespace GameOne.Ecs
 
                 //刷新buff
                 RefreshBuffProperty(addBuffEvent.toEntl,addBuffEvent.buffEntl,refreshPropertyEventPool);
-                
+                //删除添加buff事件
                 _eWorld.DelEntity(entity);
             }
         }
@@ -65,7 +65,7 @@ namespace GameOne.Ecs
                ref readonly var buffOnAdd = ref buff.Read(buffOnAddPool); //.Read(buff.ID);
                if (BuffDesign.OnAddFunc.TryGetValue(buffOnAdd.funcName,out var func))
                {
-                   func?.Invoke();
+                   func?.Invoke(_world,belongEntity.belongEntl.ID);
                }
             }
             
