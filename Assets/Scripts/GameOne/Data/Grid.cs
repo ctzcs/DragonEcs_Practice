@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace GameOne.Struct
+namespace GameOne.Data
 {
     [Serializable]
     public struct Grid

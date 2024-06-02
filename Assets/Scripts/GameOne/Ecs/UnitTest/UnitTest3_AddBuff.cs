@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace GameOne.Ecs.UnitTest
 {
-    public class UnitAddBuffTest : IEcsFixedRunProcess
+    public class UnitTest3_AddBuff : IEcsFixedRunProcess
     {
         [EcsInject] EcsDefaultWorld _world;
         [EcsInject]private EcsEventWorld _eWorld;

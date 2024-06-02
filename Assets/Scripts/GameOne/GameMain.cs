@@ -36,6 +36,7 @@ namespace GameOne
                 .Inject(_gameStateService)
                 .AddModule(new InputModule())
                 .AddModule(new GameModule())
+                .AddModule(new ViewModule())
 #if UNITY_EDITOR
                 .AddModule(new UnitTestModule())
 #endif
@@ -44,6 +45,7 @@ namespace GameOne
                 .BuildAndInit();
             
             UnityDebugService.Activate();
+            
             _timeService.fixedDeltaTime = 1f;
             //自定义的更新函数
             _turnBasedRunner = _pipline.GetRunnerInstance<TurnBasedProcessRunner>();
@@ -54,7 +56,9 @@ namespace GameOne
 
         private void Update()
         {
-            _timeService.elapsedTime += Time.deltaTime;
+            float deltaTime = Time.deltaTime;
+            _timeService.deltaTime = deltaTime;
+            _timeService.elapsedTime += deltaTime;
             while (_timeService.elapsedTime > _timeService.fixedDeltaTime)
             {
                 _pipline.FixedRun();

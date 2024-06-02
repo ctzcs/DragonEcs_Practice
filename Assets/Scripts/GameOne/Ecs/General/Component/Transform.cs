@@ -1,7 +1,7 @@
 using DCFApixels.DragonECS;
 using UnityEngine;
 
-namespace GameTwo
+namespace GameOne.Ecs
 {
     [System.Serializable]
     public struct Transform:IEcsComponent

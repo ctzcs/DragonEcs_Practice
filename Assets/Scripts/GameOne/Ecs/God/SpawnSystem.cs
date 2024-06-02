@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace GameOne.Ecs
 {
-    public class SpawnSystem:IEcsInit,IEcsFixedRunProcess
+    public class SpawnSystem:IEcsInit
     {
         [EcsInject]EcsDefaultWorld _world;
         private EcsPool<Health> _healthPool;
@@ -14,7 +14,7 @@ namespace GameOne.Ecs
             EcsDebug.Print("SpawnSystem==>Init");
             
             //将GameObject和Ecs链接
-            EcsEntityConnect connect = UnityEngine.Object.Instantiate(Resources.Load<GameObject>("Entity"))
+            EcsEntityConnect connect = UnityEngine.Object.Instantiate(Resources.Load<GameObject>("GameOne/Prefab/Entity"))
                 .GetComponent<EcsEntityConnect>();
             //添加组件
             var e = _world.NewEntity(Base.Template.Copy(Resources.Load<ScriptableEntityTemplate>("GameOne/Config/Hero/Revolver")));
@@ -35,11 +35,14 @@ namespace GameOne.Ecs
             
             ref ItemContainer container = ref _world.GetPool<ItemContainer>().Add(e);
             container.itemIds = new List<entlong>();
+            
+            
+            
         }
         
-        public void FixedRun()
-        {
-        }
+
+
+        
         
     }
 }

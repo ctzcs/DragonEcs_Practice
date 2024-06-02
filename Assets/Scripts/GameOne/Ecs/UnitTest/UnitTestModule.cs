@@ -7,7 +7,8 @@ namespace GameOne.Ecs.UnitTest
         public void Import(EcsPipeline.Builder b)
         {
             b.Add(new UnitTest1(), EcsConsts.PRE_BEGIN_LAYER)
-                .Add(new UnitAddBuffTest());
+                .Add(new UnitTest3_AddBuff())
+                .AddModule(new UnitTest2Module());
 
         }
     }
