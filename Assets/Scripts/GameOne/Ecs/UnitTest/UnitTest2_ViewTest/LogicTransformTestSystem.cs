@@ -17,6 +17,7 @@ namespace GameOne.Ecs.UnitTest
             foreach (var entity in _world.Where(out Aspect pools))
             {
                ref var logicTransform = ref entity.Get(pools.LogicTransform);
+               
                logicTransform.position += Random.insideUnitSphere;
                
             }

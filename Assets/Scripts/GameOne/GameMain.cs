@@ -1,9 +1,11 @@
+using System.Globalization;
 using DCFApixels.DragonECS;
 using GameOne.Ecs;
 using GameOne.Ecs.Input;
 using GameOne.Ecs.Process;
 using GameOne.Ecs.UnitTest;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace GameOne
 {
@@ -20,6 +22,8 @@ namespace GameOne
         private float _elapsedTime;
         // Start is called before the first frame update
 
+        
+        
         private void Start()
         {
             _world = new EcsDefaultWorld();
@@ -37,9 +41,9 @@ namespace GameOne
                 .AddModule(new InputModule())
                 .AddModule(new GameModule())
                 .AddModule(new ViewModule())
-#if UNITY_EDITOR
+
                 .AddModule(new UnitTestModule())
-#endif
+
                 .AddUnityDebug(_world,_eventWorld)
                 .AutoInject()
                 .BuildAndInit();
@@ -52,6 +56,8 @@ namespace GameOne
             /*_updateRunner = _pipline.GetRunnerInstance<EcsUpdateRunner>();*/
             
             ChangeTurnEvent.ChangeTurn(_eventWorld,ETurn.RoundStart);
+            QualitySettings.vSyncCount = 0;
+            Application.targetFrameRate = _timeService.targetMaxFrame;
         }
 
         private void Update()
@@ -59,10 +65,13 @@ namespace GameOne
             float deltaTime = Time.deltaTime;
             _timeService.deltaTime = deltaTime;
             _timeService.elapsedTime += deltaTime;
+            
             while (_timeService.elapsedTime > _timeService.fixedDeltaTime)
             {
                 _pipline.FixedRun();
-                _timeService.elapsedTime -= _timeService.fixedDeltaTime ;
+                _timeService.elapsedTime -= _timeService.fixedDeltaTime;
+                //显示帧率
+                ShowFps(deltaTime);
             }
             _pipline.Run();
             
@@ -79,8 +88,11 @@ namespace GameOne
         
         
 
-        
-       
-    
+        public Text fps;
+
+        void ShowFps(float deltaTime)
+        {
+            fps.text = ((int)(1.0 / deltaTime)).ToString(CultureInfo.CurrentCulture);
+        }
     }
 }

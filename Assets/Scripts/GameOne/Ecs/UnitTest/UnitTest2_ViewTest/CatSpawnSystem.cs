@@ -19,7 +19,7 @@ namespace GameOne.Ecs.UnitTest
         void ViewTest()
         {
             GameObject cat = Resources.Load<GameObject>("GameOne/Prefab/Cat");
-            int entityCount = 500;
+            int entityCount = 20000;
             for (int i = 0; i < entityCount; i++)
             {
                 Vector2 position = Random.insideUnitCircle;
