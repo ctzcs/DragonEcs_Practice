@@ -6,7 +6,6 @@ namespace GameOne
 {
     public class InputService
     {
-        
         public class KeyInfo
         {
             public KeyCode keyCode;

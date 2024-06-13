@@ -1,0 +1,1732 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 53
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 988ba077639ea4d42b79ff0605103c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_docs:
+    _metas:
+    - _assemblyQualifiedName: GameOne.Ecs.Ability, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: Ability
+      _isCustomName: 0
+      _typeName: Ability
+      _color:
+        serializedVersion: 2
+        rgba: 4281467135
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.AddBuffEvent, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: AddBuffEvent
+      _isCustomName: 0
+      _typeName: AddBuffEvent
+      _color:
+        serializedVersion: 2
+        rgba: 4278238462
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.AddBuffSystem, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: AddBuffSystem
+      _isCustomName: 0
+      _typeName: AddBuffSystem
+      _color:
+        serializedVersion: 2
+        rgba: 4294938880
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.Camp, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: Camp
+      _isCustomName: 0
+      _typeName: Camp
+      _color:
+        serializedVersion: 2
+        rgba: 4285202176
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.CantBeHurtTagCount, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: CantBeHurtTagCount
+      _isCustomName: 0
+      _typeName: CantBeHurtTagCount
+      _color:
+        serializedVersion: 2
+        rgba: 4294901817
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.UnitTest.CatSpawnSystem, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: CatSpawnSystem
+      _isCustomName: 0
+      _typeName: CatSpawnSystem
+      _color:
+        serializedVersion: 2
+        rgba: 4278255527
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.ChangeItemEvent, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: ChangeItemEvent
+      _isCustomName: 0
+      _typeName: ChangeItemEvent
+      _color:
+        serializedVersion: 2
+        rgba: 4294836457
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.ChangeItemSystem, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: ChangeItemSystem
+      _isCustomName: 0
+      _typeName: ChangeItemSystem
+      _color:
+        serializedVersion: 2
+        rgba: 4282908926
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.ChangeTurnEvent, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: ChangeTurnEvent
+      _isCustomName: 0
+      _typeName: ChangeTurnEvent
+      _color:
+        serializedVersion: 2
+        rgba: 4284349952
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.ChangeTurnSystem, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: ChangeTurnSystem
+      _isCustomName: 0
+      _typeName: ChangeTurnSystem
+      _color:
+        serializedVersion: 2
+        rgba: 4286513407
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.CreateMapEvent, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: CreateMapEvent
+      _isCustomName: 0
+      _typeName: CreateMapEvent
+      _color:
+        serializedVersion: 2
+        rgba: 4294901887
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.Damage, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: Damage
+      _isCustomName: 0
+      _typeName: Damage
+      _color:
+        serializedVersion: 2
+        rgba: 4286906622
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.DeathEvent, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: DeathEvent
+      _isCustomName: 0
+      _typeName: DeathEvent
+      _color:
+        serializedVersion: 2
+        rgba: 4278243071
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.DeathSystem, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: DeathSystem
+      _isCustomName: 0
+      _typeName: DeathSystem
+      _color:
+        serializedVersion: 2
+        rgba: 4293067006
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: Base.DeleteOneFrameComponentSystem`1, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: DeleteOneFrameComponentSystem<TComponent>
+      _isCustomName: 0
+      _typeName: DeleteOneFrameComponentSystem<TComponent>
+      _color:
+        serializedVersion: 2
+        rgba: 4286545791
+      _isCustomColor: 1
+      _autor: 
+      _description: 
+      _group: 
+      _tags:
+      - HiddenInDebagging
+      _isHidden: 1
+    - _assemblyQualifiedName: GameOne.Ecs.DiffLogic, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: DiffLogic
+      _isCustomName: 0
+      _typeName: DiffLogic
+      _color:
+        serializedVersion: 2
+        rgba: 4278202623
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: Base.EcsUpdateRunner, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: EcsUpdateRunner
+      _isCustomName: 0
+      _typeName: EcsUpdateRunner
+      _color:
+        serializedVersion: 2
+        rgba: 4294953216
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.GodSystem, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: GodSystem
+      _isCustomName: 0
+      _typeName: GodSystem
+      _color:
+        serializedVersion: 2
+        rgba: 4294836471
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.GridTag, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: GridTag
+      _isCustomName: 0
+      _typeName: GridTag
+      _color:
+        serializedVersion: 2
+        rgba: 4286512640
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.Health, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: Health
+      _isCustomName: 0
+      _typeName: Health
+      _color:
+        serializedVersion: 2
+        rgba: 4292608254
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.HealthChangeEvent, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: HealthChangeEvent
+      _isCustomName: 0
+      _typeName: HealthChangeEvent
+      _color:
+        serializedVersion: 2
+        rgba: 4285595136
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.HealthChangeSystem, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: HealthChangeSystem
+      _isCustomName: 0
+      _typeName: HealthChangeSystem
+      _color:
+        serializedVersion: 2
+        rgba: 4283891200
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.InitGameSystem, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: InitGameSystem
+      _isCustomName: 0
+      _typeName: InitGameSystem
+      _color:
+        serializedVersion: 2
+        rgba: 4278233087
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.InitMapSystem, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: InitMapSystem
+      _isCustomName: 0
+      _typeName: InitMapSystem
+      _color:
+        serializedVersion: 2
+        rgba: 4290052350
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.Input.InputSystem, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: InputSystem
+      _isCustomName: 0
+      _typeName: InputSystem
+      _color:
+        serializedVersion: 2
+        rgba: 4290838016
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.IsAlive, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: IsAlive
+      _isCustomName: 0
+      _typeName: IsAlive
+      _color:
+        serializedVersion: 2
+        rgba: 4294874880
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Item, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      _name: Item
+      _isCustomName: 0
+      _typeName: Item
+      _color:
+        serializedVersion: 2
+        rgba: 4293460223
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.ItemContainer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: ItemContainer
+      _isCustomName: 0
+      _typeName: ItemContainer
+      _color:
+        serializedVersion: 2
+        rgba: 4278255423
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.Input.KeyPressedEvent, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: KeyPressedEvent
+      _isCustomName: 0
+      _typeName: KeyPressedEvent
+      _color:
+        serializedVersion: 2
+        rgba: 4278224639
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.Input.KeyReleaseEvent, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: KeyReleaseEvent
+      _isCustomName: 0
+      _typeName: KeyReleaseEvent
+      _color:
+        serializedVersion: 2
+        rgba: 4278255311
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.LastRoundChangeWhenRoundEndSystem, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: LastRoundChangeWhenRoundEndSystem
+      _isCustomName: 0
+      _typeName: LastRoundChangeWhenRoundEndSystem
+      _color:
+        serializedVersion: 2
+        rgba: 4284940032
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.LastTime, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: LastTime
+      _isCustomName: 0
+      _typeName: LastTime
+      _color:
+        serializedVersion: 2
+        rgba: 4293067006
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.LogicTransform, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: LogicTransform
+      _isCustomName: 0
+      _typeName: LogicTransform
+      _color:
+        serializedVersion: 2
+        rgba: 4278255325
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.UnitTest.LogicTransformTestSystem, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: LogicTransformTestSystem
+      _isCustomName: 0
+      _typeName: LogicTransformTestSystem
+      _color:
+        serializedVersion: 2
+        rgba: 4294770942
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: DCFApixels.DragonECS.EcsWorld+NullWorld, DCFApixels.DragonECS,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: NullWorld
+      _isCustomName: 0
+      _typeName: NullWorld
+      _color:
+        serializedVersion: 2
+        rgba: 4291166463
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.OwnedAbilities, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: OwnedAbilities
+      _isCustomName: 0
+      _typeName: OwnedAbilities
+      _color:
+        serializedVersion: 2
+        rgba: 4278255509
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.RefreshBuffPropertyEvent, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: RefreshBuffPropertyEvent
+      _isCustomName: 0
+      _typeName: RefreshBuffPropertyEvent
+      _color:
+        serializedVersion: 2
+        rgba: 4294901815
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.RefreshPropertyInfluenceByBuffSystem`2,
+        Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: RefreshPropertyInfluenceByBuffSystem<TProperty, TBuffMod>
+      _isCustomName: 0
+      _typeName: RefreshPropertyInfluenceByBuffSystem<TProperty, TBuffMod>
+      _color:
+        serializedVersion: 2
+        rgba: 4278255369
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.RefreshTagInfluenceByBuffSystem`1, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: RefreshTagInfluenceByBuffSystem<T>
+      _isCustomName: 0
+      _typeName: RefreshTagInfluenceByBuffSystem<T>
+      _color:
+        serializedVersion: 2
+        rgba: 4278255257
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.RemoveBuffSystem, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: RemoveBuffSystem
+      _isCustomName: 0
+      _typeName: RemoveBuffSystem
+      _color:
+        serializedVersion: 2
+        rgba: 4279763199
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.Round, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: Round
+      _isCustomName: 0
+      _typeName: Round
+      _color:
+        serializedVersion: 2
+        rgba: 4278255589
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.RoundEndEvent, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: RoundEndEvent
+      _isCustomName: 0
+      _typeName: RoundEndEvent
+      _color:
+        serializedVersion: 2
+        rgba: 4289920768
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.RoundStartEvent, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: RoundStartEvent
+      _isCustomName: 0
+      _typeName: RoundStartEvent
+      _color:
+        serializedVersion: 2
+        rgba: 4287561983
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.RoundStartSystem, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: RoundStartSystem
+      _isCustomName: 0
+      _typeName: RoundStartSystem
+      _color:
+        serializedVersion: 2
+        rgba: 4278225662
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.SaveSystem, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: SaveSystem
+      _isCustomName: 0
+      _typeName: SaveSystem
+      _color:
+        serializedVersion: 2
+        rgba: 4294246654
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.ShowHpSystem, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: ShowHpSystem
+      _isCustomName: 0
+      _typeName: ShowHpSystem
+      _color:
+        serializedVersion: 2
+        rgba: 4278255240
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.ShowItemsSystem, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: ShowItemsSystem
+      _isCustomName: 0
+      _typeName: ShowItemsSystem
+      _color:
+        serializedVersion: 2
+        rgba: 4294901800
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.SpawnSystem, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: SpawnSystem
+      _isCustomName: 0
+      _typeName: SpawnSystem
+      _color:
+        serializedVersion: 2
+        rgba: 4278231806
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.Transform, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: Transform
+      _isCustomName: 0
+      _typeName: Transform
+      _color:
+        serializedVersion: 2
+        rgba: 4280745728
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.Process.TurnBasedProcessRunner, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: TurnBasedProcessRunner
+      _isCustomName: 0
+      _typeName: TurnBasedProcessRunner
+      _color:
+        serializedVersion: 2
+        rgba: 4294918912
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.TurnBasedSystem, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: TurnBasedSystem
+      _isCustomName: 0
+      _typeName: TurnBasedSystem
+      _color:
+        serializedVersion: 2
+        rgba: 4294836374
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.UnitTest.UnitTest1, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: UnitTest1
+      _isCustomName: 0
+      _typeName: UnitTest1
+      _color:
+        serializedVersion: 2
+        rgba: 4291231999
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.UnitTest.UnitTest3_AddBuff, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: UnitTest3_AddBuff
+      _isCustomName: 0
+      _typeName: UnitTest3_AddBuff
+      _color:
+        serializedVersion: 2
+        rgba: 4278255295
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.UpdateViewSystem, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: UpdateViewSystem
+      _isCustomName: 0
+      _typeName: UpdateViewSystem
+      _color:
+        serializedVersion: 2
+        rgba: 4294901793
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.View, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: View
+      _isCustomName: 0
+      _typeName: View
+      _color:
+        serializedVersion: 2
+        rgba: 4278213631
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: 
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: DCFApixels.DragonECS.EcsDebug, DCFApixels.DragonECS,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: EcsDebug
+      _isCustomName: 0
+      _typeName: EcsDebug
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "Debugging utility. To modify or change the behavior, create
+        a new class inherited from DebugService and set this service using DebugService.Set<T>().\r\n 
+        - DCFApixels"
+      _group: _DragonECS/_Core/Debug/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: DCFApixels.DragonECS.TypeMeta, DCFApixels.DragonECS,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: TypeMeta
+      _isCustomName: 0
+      _typeName: TypeMeta
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "Intended for extending meta information of types, for customization
+        of type display in the editor. You can get it by using the object.GetMeta()
+        or Type.ToMeta() extension method. Meta information is collected from meta
+        attributes.\r\n  - DCFApixels"
+      _group: _DragonECS/_Core/Debug/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: DCFApixels.DragonECS.IEcsInject`1, DCFApixels.DragonECS,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: Inject<T>
+      _isCustomName: 1
+      _typeName: IEcsInject<T>
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "The interface of the dependency injection process.\r\n  - DCFApixels"
+      _group: _DragonECS/_Core/DI/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: DCFApixels.DragonECS.IOnInitInjectionComplete, DCFApixels.DragonECS,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: OnInitInjectionComplete
+      _isCustomName: 1
+      _typeName: IOnInitInjectionComplete
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "The process interface that signals the completion of injection
+        during pipeline initialization via the EcsPipeline.Init() method.\r\n  -
+        DCFApixels"
+      _group: _DragonECS/_Core/DI/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: DCFApixels.DragonECS.EcsPipeline, DCFApixels.DragonECS,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: EcsPipeline
+      _isCustomName: 0
+      _typeName: EcsPipeline
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "Container and engine for systems. Responsible for configuring
+        the execution order of systems, providing a mechanism for messaging between
+        systems, and a dependency injection mechanism.\r\n  - DCFApixels"
+      _group: _DragonECS/_Core/Other/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: DCFApixels.DragonECS.RunnersCore.EcsRunner`1, DCFApixels.DragonECS,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: EcsRunner<TProcess>
+      _isCustomName: 0
+      _typeName: EcsRunner<TProcess>
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "...\r\n  - DCFApixels"
+      _group: _DragonECS/_Core/Other/
+      _tags:
+      - HiddenInDebagging
+      _isHidden: 1
+    - _assemblyQualifiedName: DCFApixels.DragonECS.IEcsPipelineMember, DCFApixels.DragonECS,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: IEcsPipelineMember
+      _isCustomName: 0
+      _typeName: IEcsPipelineMember
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "...\r\n  - DCFApixels"
+      _group: _DragonECS/_Core/Other/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: DCFApixels.DragonECS.IEcsProcess, DCFApixels.DragonECS,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: IEcsProcess
+      _isCustomName: 0
+      _typeName: IEcsProcess
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "...\r\n  - DCFApixels"
+      _group: _DragonECS/_Core/Other/
+      _tags:
+      - HiddenInDebagging
+      _isHidden: 1
+    - _assemblyQualifiedName: DCFApixels.DragonECS.RunnersCore.IEcsRunner, DCFApixels.DragonECS,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: IEcsRunner
+      _isCustomName: 0
+      _typeName: IEcsRunner
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "...\r\n  - DCFApixels"
+      _group: _DragonECS/_Core/Other/
+      _tags:
+      - HiddenInDebagging
+      _isHidden: 1
+    - _assemblyQualifiedName: DCFApixels.DragonECS.IEcsSystemDefaultLayer, DCFApixels.DragonECS,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: IEcsSystemDefaultLayer
+      _isCustomName: 0
+      _typeName: IEcsSystemDefaultLayer
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "...\r\n  - DCFApixels"
+      _group: _DragonECS/_Core/Other/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: DCFApixels.DragonECS.SystemsLayerMarkerSystem, DCFApixels.DragonECS,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: SystemsLayerMarkerSystem
+      _isCustomName: 0
+      _typeName: SystemsLayerMarkerSystem
+      _color:
+        serializedVersion: 2
+        rgba: 4278190080
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "An auxiliary type of system for dividing a pipeline into layers.
+        This system is automatically added to the EcsPipeline.\r\n  - DCFApixels"
+      _group: _DragonECS/_Core/Other/
+      _tags:
+      - HiddenInDebagging
+      _isHidden: 1
+    - _assemblyQualifiedName: DCFApixels.DragonECS.Internal.EcsNullPool, DCFApixels.DragonECS,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: EcsNullPool
+      _isCustomName: 0
+      _typeName: EcsNullPool
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "A placeholder type, an instance of this type replaces the null
+        ref.\r\n  - DCFApixels"
+      _group: _DragonECS/_Core/Pools/
+      _tags:
+      - HiddenInDebagging
+      _isHidden: 1
+    - _assemblyQualifiedName: DCFApixels.DragonECS.EcsPool`1, DCFApixels.DragonECS,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: EcsPool<T>
+      _isCustomName: 0
+      _typeName: EcsPool<T>
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "Pool for IEcsComponent components.\r\n  - DCFApixels"
+      _group: _DragonECS/_Core/Pools/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: DCFApixels.DragonECS.EcsTagPool`1, DCFApixels.DragonECS,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: EcsTagPool<T>
+      _isCustomName: 0
+      _typeName: EcsTagPool<T>
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "Pool for IEcsTagComponent components. EcsTagPool is optimized
+        for storing tag components or components without data.\r\n  - DCFApixels"
+      _group: _DragonECS/_Core/Pools/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: DCFApixels.DragonECS.IEcsComponent, DCFApixels.DragonECS,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: IEcsComponent
+      _isCustomName: 0
+      _typeName: IEcsComponent
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "Standard component.\r\n  - DCFApixels"
+      _group: _DragonECS/_Core/Pools/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: DCFApixels.DragonECS.IEcsTagComponent, DCFApixels.DragonECS,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: IEcsTagComponent
+      _isCustomName: 0
+      _typeName: IEcsTagComponent
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "Tag component or component without data.\r\n  - DCFApixels"
+      _group: _DragonECS/_Core/Pools/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: DCFApixels.DragonECS.IEcsDestroy, DCFApixels.DragonECS,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: Destroy
+      _isCustomName: 1
+      _typeName: IEcsDestroy
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "The process to run when EcsPipeline.Destroy() is called.\r\n 
+        - DCFApixels"
+      _group: _DragonECS/_Core/Processes/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: DCFApixels.DragonECS.Internal.EcsDestroyRunner, DCFApixels.DragonECS,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: EcsDestroyRunner
+      _isCustomName: 0
+      _typeName: EcsDestroyRunner
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "...\r\n  - DCFApixels"
+      _group: _DragonECS/_Core/Processes/
+      _tags:
+      - HiddenInDebagging
+      _isHidden: 1
+    - _assemblyQualifiedName: DCFApixels.DragonECS.Internal.EcsInitRunner, DCFApixels.DragonECS,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: EcsInitRunner
+      _isCustomName: 0
+      _typeName: EcsInitRunner
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "...\r\n  - DCFApixels"
+      _group: _DragonECS/_Core/Processes/
+      _tags:
+      - HiddenInDebagging
+      _isHidden: 1
+    - _assemblyQualifiedName: DCFApixels.DragonECS.Internal.EcsPreInitRunner, DCFApixels.DragonECS,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: EcsPreInitRunner
+      _isCustomName: 0
+      _typeName: EcsPreInitRunner
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "...\r\n  - DCFApixels"
+      _group: _DragonECS/_Core/Processes/
+      _tags:
+      - HiddenInDebagging
+      _isHidden: 1
+    - _assemblyQualifiedName: DCFApixels.DragonECS.Internal.EcsRunRunner, DCFApixels.DragonECS,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: EcsRunRunner
+      _isCustomName: 0
+      _typeName: EcsRunRunner
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "...\r\n  - DCFApixels"
+      _group: _DragonECS/_Core/Processes/
+      _tags:
+      - HiddenInDebagging
+      _isHidden: 1
+    - _assemblyQualifiedName: DCFApixels.DragonECS.IEcsInit, DCFApixels.DragonECS,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: Init
+      _isCustomName: 1
+      _typeName: IEcsInit
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "The process to run when EcsPipeline.Init() is called. After
+        PreInit\r\n  - DCFApixels"
+      _group: _DragonECS/_Core/Processes/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: DCFApixels.DragonECS.IEcsPreInit, DCFApixels.DragonECS,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: PreInit
+      _isCustomName: 1
+      _typeName: IEcsPreInit
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "The process to run when EcsPipeline.Init() is called. Before
+        Init\r\n  - DCFApixels"
+      _group: _DragonECS/_Core/Processes/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: DCFApixels.DragonECS.IEcsRun, DCFApixels.DragonECS,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: Run
+      _isCustomName: 1
+      _typeName: IEcsRun
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "The process to run when EcsPipeline.Run() is called.\r\n  -
+        DCFApixels"
+      _group: _DragonECS/_Core/Processes/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: DCFApixels.DragonECS.EcsDefaultWorld, DCFApixels.DragonECS,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: EcsDefaultWorld
+      _isCustomName: 0
+      _typeName: EcsDefaultWorld
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "Inherits EcsWorld without extending its functionality and is
+        used for specific injections. Can be used to store regular game entities,
+        can also be used as a single world in the game for all entities.\r\n  - DCFApixels"
+      _group: _DragonECS/_Core/Worlds/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: DCFApixels.DragonECS.EcsEventWorld, DCFApixels.DragonECS,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: EcsEventWorld
+      _isCustomName: 0
+      _typeName: EcsEventWorld
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "Inherits EcsWorld without extending its functionality and is
+        used for specific injections. Can be used to store event entities.\r\n  -
+        DCFApixels"
+      _group: _DragonECS/_Core/Worlds/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: DCFApixels.DragonECS.EcsWorld, DCFApixels.DragonECS,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: EcsWorld
+      _isCustomName: 0
+      _typeName: EcsWorld
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "It is a container for entities and components.\r\n  - DCFApixels"
+      _group: _DragonECS/_Core/Worlds/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: DCFApixels.DragonECS.GameObjectConnect, DCFApixels.DragonECS.Unity,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: GameObjectConnect
+      _isCustomName: 0
+      _typeName: GameObjectConnect
+      _color:
+        serializedVersion: 2
+        rgba: 4294967040
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "This component is automatically added if an entity is connected
+        to one of the EcsEntityConnect. It also contains a reference to the connected
+        EcsEntityConnect.\r\n  - DCFApixels"
+      _group: _DragonECS/Unity/Components/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: DCFApixels.DragonECS.UnityComponent`1, DCFApixels.DragonECS.Unity,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: UnityComponent<T>
+      _isCustomName: 0
+      _typeName: UnityComponent<T>
+      _color:
+        serializedVersion: 2
+        rgba: 4294967040
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "Component-reference to Unity object for EcsPool.\r\n  - DCFApixels"
+      _group: _DragonECS/Unity/Components/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: DCFApixels.DragonECS.Unity.Internal.EntityMonitor,
+        DCFApixels.DragonECS.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: EntityMonitor
+      _isCustomName: 0
+      _typeName: EntityMonitor
+      _color:
+        serializedVersion: 2
+        rgba: 4286545791
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "...\r\n  - DCFApixels"
+      _group: _DragonECS/Unity/Debug/
+      _tags:
+      - HiddenInDebagging
+      _isHidden: 1
+    - _assemblyQualifiedName: DCFApixels.DragonECS.Unity.Internal.PipelineMonitor,
+        DCFApixels.DragonECS.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: PipelineMonitor
+      _isCustomName: 0
+      _typeName: PipelineMonitor
+      _color:
+        serializedVersion: 2
+        rgba: 4286545791
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "...\r\n  - DCFApixels"
+      _group: _DragonECS/Unity/Debug/
+      _tags:
+      - HiddenInDebagging
+      _isHidden: 1
+    - _assemblyQualifiedName: DCFApixels.DragonECS.Unity.Internal.PipelineMonitorSystem,
+        DCFApixels.DragonECS.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: PipelineMonitorSystem
+      _isCustomName: 0
+      _typeName: PipelineMonitorSystem
+      _color:
+        serializedVersion: 2
+        rgba: 4286545791
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "...\r\n  - DCFApixels"
+      _group: _DragonECS/Unity/Debug/
+      _tags:
+      - HiddenInDebagging
+      _isHidden: 1
+    - _assemblyQualifiedName: DCFApixels.DragonECS.Unity.Editors.PipelineProcessMonitor,
+        DCFApixels.DragonECS.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: PipelineProcessMonitor
+      _isCustomName: 0
+      _typeName: PipelineProcessMonitor
+      _color:
+        serializedVersion: 2
+        rgba: 4286545791
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "...\r\n  - DCFApixels"
+      _group: _DragonECS/Unity/Debug/
+      _tags:
+      - HiddenInDebagging
+      _isHidden: 1
+    - _assemblyQualifiedName: DCFApixels.DragonECS.Unity.Internal.WorldMonitor, DCFApixels.DragonECS.Unity,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: WorldMonitor
+      _isCustomName: 0
+      _typeName: WorldMonitor
+      _color:
+        serializedVersion: 2
+        rgba: 4286545791
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "...\r\n  - DCFApixels"
+      _group: _DragonECS/Unity/Debug/
+      _tags:
+      - HiddenInDebagging
+      _isHidden: 1
+    - _assemblyQualifiedName: DCFApixels.DragonECS.Unity.Internal.WorldMonitorSystem,
+        DCFApixels.DragonECS.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: WorldMonitorSystem
+      _isCustomName: 0
+      _typeName: WorldMonitorSystem
+      _color:
+        serializedVersion: 2
+        rgba: 4286545791
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "...\r\n  - DCFApixels"
+      _group: _DragonECS/Unity/Debug/
+      _tags:
+      - HiddenInDebagging
+      _isHidden: 1
+    - _assemblyQualifiedName: DCFApixels.DragonECS.AutoEntityCreator, DCFApixels.DragonECS.Unity,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: AutoEntityCreator
+      _isCustomName: 0
+      _typeName: AutoEntityCreator
+      _color:
+        serializedVersion: 2
+        rgba: 4294967040
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "MonoBehaviour. Automatically creates an entity in the selected
+        world and connects it to EcsEntityConnect.\r\n  - DCFApixels"
+      _group: _DragonECS/Unity/Entity Building/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: DCFApixels.DragonECS.EcsEntityConnect, DCFApixels.DragonECS.Unity,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: EcsEntityConnect
+      _isCustomName: 0
+      _typeName: EcsEntityConnect
+      _color:
+        serializedVersion: 2
+        rgba: 4294967040
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "MonoBehaviour. Responsible for connecting the entity and GameObject
+        using the EcsEntityConnect.ConnectWith method.\r\n  - DCFApixels"
+      _group: _DragonECS/Unity/Entity Building/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: DCFApixels.DragonECS.MonoEntityTemplate, DCFApixels.DragonECS.Unity,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: MonoEntityTemplate
+      _isCustomName: 0
+      _typeName: MonoEntityTemplate
+      _color:
+        serializedVersion: 2
+        rgba: 4294967040
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "MonoBehaviour implementation of an entity template. Templates
+        are a set of components that are applied to entities.\r\n  - DCFApixels"
+      _group: _DragonECS/Unity/Entity Building/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: DCFApixels.DragonECS.ScriptableEntityTemplate, DCFApixels.DragonECS.Unity,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: ScriptableEntityTemplate
+      _isCustomName: 0
+      _typeName: ScriptableEntityTemplate
+      _color:
+        serializedVersion: 2
+        rgba: 4294967040
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "ScriptableObject implementation of an entity template. Templates
+        are a set of components that are applied to entities.\r\n  - DCFApixels"
+      _group: _DragonECS/Unity/Entity Building/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: DCFApixels.DragonECS.IEcsGizmosProcess, DCFApixels.DragonECS.Unity,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: DrawGizmos
+      _isCustomName: 1
+      _typeName: IEcsGizmosProcess
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "The process to run when EcsPipeline.DrawGizmos() is called.\r\n 
+        - DCFApixels"
+      _group: _DragonECS/Unity/Processes/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: DCFApixels.DragonECS.Unity.Internal.EcsFixedRunRunner,
+        DCFApixels.DragonECS.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: EcsFixedRunRunner
+      _isCustomName: 0
+      _typeName: EcsFixedRunRunner
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "...\r\n  - DCFApixels"
+      _group: _DragonECS/Unity/Processes/
+      _tags:
+      - HiddenInDebagging
+      _isHidden: 1
+    - _assemblyQualifiedName: DCFApixels.DragonECS.Unity.Internal.EcsLateGizmosRunner,
+        DCFApixels.DragonECS.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: EcsLateGizmosRunner
+      _isCustomName: 0
+      _typeName: EcsLateGizmosRunner
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "...\r\n  - DCFApixels"
+      _group: _DragonECS/Unity/Processes/
+      _tags:
+      - HiddenInDebagging
+      _isHidden: 1
+    - _assemblyQualifiedName: DCFApixels.DragonECS.Unity.Internal.EcsLateRunRunner,
+        DCFApixels.DragonECS.Unity, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: EcsLateRunRunner
+      _isCustomName: 0
+      _typeName: EcsLateRunRunner
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "...\r\n  - DCFApixels"
+      _group: _DragonECS/Unity/Processes/
+      _tags:
+      - HiddenInDebagging
+      _isHidden: 1
+    - _assemblyQualifiedName: DCFApixels.DragonECS.IEcsFixedRunProcess, DCFApixels.DragonECS.Unity,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: FixedRun
+      _isCustomName: 1
+      _typeName: IEcsFixedRunProcess
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "The process to run when EcsPipeline.FixedRun() is called.\r\n 
+        - DCFApixels"
+      _group: _DragonECS/Unity/Processes/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: DCFApixels.DragonECS.IEcsLateRunProcess, DCFApixels.DragonECS.Unity,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: LateRun
+      _isCustomName: 1
+      _typeName: IEcsLateRunProcess
+      _color:
+        serializedVersion: 2
+        rgba: 4286926591
+      _isCustomColor: 1
+      _autor: DCFApixels
+      _description: "The process to run when EcsPipeline.LateRun() is called.\r\n 
+        - DCFApixels"
+      _group: _DragonECS/Unity/Processes/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: DCFApixels.DragonECS.AutoInjectSystem, DCFApixels.DragonECS.AutoInjections,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      _name: AutoInjectSystem
+      _isCustomName: 0
+      _typeName: AutoInjectSystem
+      _color:
+        serializedVersion: 2
+        rgba: 4286545791
+      _isCustomColor: 1
+      _autor: 
+      _description: 
+      _group: DragonECS/
+      _tags:
+      - HiddenInDebagging
+      _isHidden: 1
+    - _assemblyQualifiedName: GameOne.Ecs.BelongEntity, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: BelongEntity
+      _isCustomName: 0
+      _typeName: BelongEntity
+      _color:
+        serializedVersion: 2
+        rgba: 4278214911
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: GameOne/Buff/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.Buff, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: Buff
+      _isCustomName: 0
+      _typeName: Buff
+      _color:
+        serializedVersion: 2
+        rgba: 4294901861
+      _isCustomColor: 0
+      _autor: 
+      _description: "Buff\u6807\u7B7E\uFF0C\u7528\u4E8E\u5B58\u653EBuff Id"
+      _group: GameOne/Buff/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.BuffOnAdd, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: BuffOnAdd
+      _isCustomName: 0
+      _typeName: BuffOnAdd
+      _color:
+        serializedVersion: 2
+        rgba: 4294853120
+      _isCustomColor: 0
+      _autor: 
+      _description: "Buff\u6DFB\u52A0\u7684\u65F6\u5019\u53D1\u751F\u7684\u4E8B\u60C5"
+      _group: GameOne/Buff/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.BuffOnRemove, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: BuffOnRemove
+      _isCustomName: 0
+      _typeName: BuffOnRemove
+      _color:
+        serializedVersion: 2
+        rgba: 4290182656
+      _isCustomColor: 0
+      _autor: 
+      _description: "Buff\u79FB\u9664\u7684\u65F6\u5019\u53D1\u751F\u7684\u4E8B\u60C5"
+      _group: GameOne/Buff/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.CarryBuffs, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: CarryBuffs
+      _isCustomName: 0
+      _typeName: CarryBuffs
+      _color:
+        serializedVersion: 2
+        rgba: 4278204927
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: GameOne/Buff/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.Buff_HealthMod, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: Buff_HealthMod
+      _isCustomName: 0
+      _typeName: Buff_HealthMod
+      _color:
+        serializedVersion: 2
+        rgba: 4294949632
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: GameOne/Buff/PropertyMod/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.CantBeHurtTag, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: CantBeHurtTag
+      _isCustomName: 0
+      _typeName: CantBeHurtTag
+      _color:
+        serializedVersion: 2
+        rgba: 4294858496
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: GameOne/Buff/PropertyMod/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.MonsterTag, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: MonsterTag
+      _isCustomName: 0
+      _typeName: MonsterTag
+      _color:
+        serializedVersion: 2
+        rgba: 4278386943
+      _isCustomColor: 0
+      _autor: 
+      _description: "AI\u7684\u6807\u7B7E"
+      _group: GameOne/Character/AI/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.PlayerTag, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: PlayerTag
+      _isCustomName: 0
+      _typeName: PlayerTag
+      _color:
+        serializedVersion: 2
+        rgba: 4278255447
+      _isCustomColor: 0
+      _autor: 
+      _description: "\u73A9\u5BB6\u6807\u7B7E\uFF0C\u7528\u6765\u6807\u8BC6\u73A9\u5BB6"
+      _group: GameOne/Character/Player/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.Name, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: Name
+      _isCustomName: 0
+      _typeName: Name
+      _color:
+        serializedVersion: 2
+        rgba: 4294836363
+      _isCustomColor: 0
+      _autor: 
+      _description: 
+      _group: GameOne/General/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.GroundContainer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: GroundContainer
+      _isCustomName: 0
+      _typeName: GroundContainer
+      _color:
+        serializedVersion: 2
+        rgba: 4294905088
+      _isCustomColor: 0
+      _autor: 
+      _description: "\u5730\u8868\u7269\u4F53\u7684\u5BB9\u5668"
+      _group: GameOne/Grid/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.SurfaceContainer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: SurfaceContainer
+      _isCustomName: 0
+      _typeName: SurfaceContainer
+      _color:
+        serializedVersion: 2
+        rgba: 4278195198
+      _isCustomColor: 0
+      _autor: 
+      _description: "\u5730\u8868\u5BB9\u5668\uFF0C\u7528\u6765\u5B58\u653E\u5730\u8868"
+      _group: GameOne/Grid/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.TileDir, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: TileDir
+      _isCustomName: 0
+      _typeName: TileDir
+      _color:
+        serializedVersion: 2
+        rgba: 4278231295
+      _isCustomColor: 0
+      _autor: 
+      _description: "\u5BF9\u8C61\u671D\u5411\u7684\u65B9\u5411"
+      _group: GameOne/Grid/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.TilePos, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: TilePos
+      _isCustomName: 0
+      _typeName: TilePos
+      _color:
+        serializedVersion: 2
+        rgba: 4289068800
+      _isCustomColor: 0
+      _autor: 
+      _description: "\u5BF9\u8C61\u6240\u5904\u7684\u4F4D\u7F6E"
+      _group: GameOne/Grid/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.GridContainer, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: GridContainer
+      _isCustomName: 0
+      _typeName: GridContainer
+      _color:
+        serializedVersion: 2
+        rgba: 4278255557
+      _isCustomColor: 0
+      _autor: 
+      _description: "\u683C\u5B50\u5BB9\u5668\uFF0C\u7528\u6765\u5B58\u653E\u6240\u6709\u7684\u683C\u5B50"
+      _group: GameOne/Map/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.MapModel, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: MapModel
+      _isCustomName: 0
+      _typeName: MapModel
+      _color:
+        serializedVersion: 2
+        rgba: 4278255500
+      _isCustomColor: 0
+      _autor: 
+      _description: "\u5730\u56FE\u7684\u57FA\u672C\u6570\u636E"
+      _group: GameOne/Map/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.MapTag, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: MapTag
+      _isCustomName: 0
+      _typeName: MapTag
+      _color:
+        serializedVersion: 2
+        rgba: 4278206975
+      _isCustomColor: 0
+      _autor: 
+      _description: "\u5730\u56FE\u7684\u6807\u7B7E"
+      _group: GameOne/Map/
+      _tags: []
+      _isHidden: 0
+    - _assemblyQualifiedName: GameOne.Ecs.LastRound, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      _name: LastRound
+      _isCustomName: 0
+      _typeName: LastRound
+      _color:
+        serializedVersion: 2
+        rgba: 4285726975
+      _isCustomColor: 0
+      _autor: 
+      _description: "\u8BE5\u4ECD\u80FD\u5B9E\u4F53\u5B58\u6D3B\u7684\u56DE\u5408"
+      _group: GameOne/Time/
+      _tags: []
+      _isHidden: 0
+  m_isExpands: 0101010000000000000100000000000101000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000

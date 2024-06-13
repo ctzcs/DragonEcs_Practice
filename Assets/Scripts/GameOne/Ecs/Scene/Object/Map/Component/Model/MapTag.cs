@@ -5,6 +5,7 @@ namespace GameOne.Ecs
 {
     [MetaGroup("GameOne/Map/")]
     [Serializable]
+    [MetaDescription("地图的标签")]
     public struct MapTag : IEcsTagComponent
     {
     }
