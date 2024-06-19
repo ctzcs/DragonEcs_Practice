@@ -25,8 +25,7 @@ namespace GameOne.Ecs
                 view.elapsedTime += _timeService.deltaTime;
                 
                 if (logicTransform.position != view.targetPos)
-                {
-                    view.startPos = view.transform.position;
+                { 
                     view.targetPos = logicTransform.position;
                     view.elapsedTime = 0;
                 }
