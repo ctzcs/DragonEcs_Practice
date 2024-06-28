@@ -8,7 +8,7 @@ namespace GameOne.Ecs
     {
         [EcsInject]EcsDefaultWorld _world;
         [EcsInject]EcsEventWorld _eventWorld;
-        [EcsInject] private GameStateService _stateService;
+        [EcsInject] private GameService service;
         private EcsPool<Health> _healthPool;
         private EcsPool<Name> _namePool;
         private EcsPool<GameObjectConnect> _connectPool;

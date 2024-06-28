@@ -11,14 +11,23 @@ namespace GameOne
 {
     public class GameMain : MonoBehaviour
     {
+        /// <summary>
+        /// 默认世界
+        /// </summary>
         private EcsDefaultWorld _world;
+        /// <summary>
+        /// 事件世界
+        /// </summary>
         private EcsEventWorld _eventWorld;
-        private EcsPipeline _pipline;
+        /// <summary>
+        /// 管线
+        /// </summary>
+        private EcsPipeline _pipeline;
 
         /*private EcsUpdateRunner _updateRunner;*/
         private TurnBasedProcessRunner _turnBasedRunner;
         private TimeService _timeService;
-        private GameStateService _gameStateService;
+        private GameService gameService;
         private float _elapsedTime;
         // Start is called before the first frame update
 
@@ -29,15 +38,15 @@ namespace GameOne
             _world = new EcsDefaultWorld();
             _eventWorld = new EcsEventWorld();
             _timeService = new TimeService();
-            _gameStateService = new GameStateService();
+            gameService = new GameService();
             var e = _world.NewEntity();
             _world.DelEntity(e);
             
-            _pipline = EcsPipeline.New()
+            _pipeline = EcsPipeline.New()
                 .Inject(_world)
                 .Inject(_eventWorld)
                 .Inject(_timeService)
-                .Inject(_gameStateService)
+                .Inject(gameService)
                 .AddModule(new InputModule())
                 .AddModule(new GameModule())
                 .AddModule(new ViewModule())
@@ -52,10 +61,10 @@ namespace GameOne
             
             _timeService.fixedDeltaTime = 1f;
             //自定义的更新函数
-            _turnBasedRunner = _pipline.GetRunnerInstance<TurnBasedProcessRunner>();
+            _turnBasedRunner = _pipeline.GetRunnerInstance<TurnBasedProcessRunner>();
             /*_updateRunner = _pipline.GetRunnerInstance<EcsUpdateRunner>();*/
             
-            ChangeTurnEvent.ChangeTurn(_eventWorld,ETurn.RoundStart);
+            ChangeTurnEvent.ChangeTurn(_eventWorld,LevelMode.ETurn.RoundStart);
             QualitySettings.vSyncCount = 0;
             Application.targetFrameRate = _timeService.targetMaxFrame;
         }
@@ -68,12 +77,12 @@ namespace GameOne
             
             while (_timeService.elapsedTime > _timeService.fixedDeltaTime)
             {
-                _pipline.FixedRun();
+                _pipeline.FixedRun();
                 _timeService.elapsedTime -= _timeService.fixedDeltaTime;
                 //显示帧率
                 ShowFps(deltaTime);
             }
-            _pipline.Run();
+            _pipeline.Run();
             
         }
 

@@ -13,7 +13,7 @@ namespace GameOne
     {
         [EcsInject] private EcsDefaultWorld _world;
         [EcsInject] private TimeService _timeService;
-        [EcsInject] private GameStateService _gameStateService;
+        [EcsInject] private GameService gameService;
         class Aspect:EcsAspect
         {
             public EcsTagPool<PlayerTag> playerTags = Inc;
@@ -21,7 +21,7 @@ namespace GameOne
         }
         public void FixedRun()
         {
-            if (_gameStateService.state == EGameState.Saving)
+            if (gameService.State == EGameState.Saving)
             {
                 Serialize();
                 EcsDebug.Print($"Game==>Saving {_timeService.fixedDeltaTime}");
@@ -56,7 +56,7 @@ namespace GameOne
             }
             finally
             {
-                _gameStateService.state = EGameState.Play;
+                gameService.State = EGameState.Play;
             }
         
         }

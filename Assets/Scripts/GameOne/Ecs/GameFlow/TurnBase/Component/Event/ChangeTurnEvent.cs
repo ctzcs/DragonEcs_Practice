@@ -7,15 +7,15 @@ namespace GameOne.Ecs
     [Serializable]
     public partial struct ChangeTurnEvent:IEcsComponent
     {
-        public ETurn toTurn;
+        public LevelMode.ETurn toTurn;
     }
     
     public partial struct ChangeTurnEvent
     {
-        public static void ChangeTurn(EcsWorld world,ETurn toTurn)
+        public static void ChangeTurn(EcsWorld world,LevelMode.ETurn toTurn)
         {
             var e= world.NewEntityLong();
-            e.TryGetOrAdd<ChangeTurnEvent>().toTurn = ETurn.RoundStart;
+            e.TryGetOrAdd<ChangeTurnEvent>().toTurn = LevelMode.ETurn.RoundStart;
         }
     }
 }

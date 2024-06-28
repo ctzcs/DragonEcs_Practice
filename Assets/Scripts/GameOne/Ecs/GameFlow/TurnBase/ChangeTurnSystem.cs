@@ -7,7 +7,7 @@ namespace GameOne.Ecs
     {
         [EcsInject]EcsDefaultWorld _world;
         [EcsInject]EcsEventWorld _eWorld;
-        [EcsInject]GameStateService _gameState;
+        [EcsInject]GameService game;
 
         class Aspect:EcsAspect
         {
@@ -18,13 +18,13 @@ namespace GameOne.Ecs
             foreach (var changeTurnEvent in _eWorld.Where(out Aspect aspect))
             {
                 var toTurn = changeTurnEvent.Read(aspect.changeTurnEventPool).toTurn;
-                _gameState.turn = toTurn;
+                ((LevelMode)game.NowMode).Turn = toTurn;
                 switch (toTurn)
                 {
-                    case ETurn.RoundStart:
+                    case LevelMode.ETurn.RoundStart:
                         RoundStart();
                         break;
-                    case ETurn.RoundEnd:
+                    case LevelMode.ETurn.RoundEnd:
                         RoundEnd();
                         break;
                 }

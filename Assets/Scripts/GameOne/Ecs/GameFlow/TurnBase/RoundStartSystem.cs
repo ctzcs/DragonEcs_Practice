@@ -6,11 +6,11 @@ namespace GameOne.Ecs
     public class RoundStartSystem : ITurnBasedProcess
     {
         [EcsInject] EcsDefaultWorld _world;
-        [EcsInject] private GameStateService _gameState;
+        [EcsInject] private GameService game;
         
         public void RunTurn()
         {
-            if (_gameState.turn == ETurn.RoundStart)
+            if (((LevelMode)game.NowMode).Turn == LevelMode.ETurn.RoundStart)
             {
                 EcsDebug.Print("回合开始");
             }
