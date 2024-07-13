@@ -1,5 +1,6 @@
 ﻿using Base;
 using DCFApixels.DragonECS;
+using GameOne.Service;
 
 namespace GameOne.Ecs
 {

@@ -3,7 +3,8 @@ using DCFApixels.DragonECS;
 using GameOne.Ecs;
 using GameOne.Ecs.Input;
 using GameOne.Ecs.Process;
-using GameOne.Ecs.UnitTest;
+using GameOne.Ecs.Z_UnitTest;
+using GameOne.Service;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -39,6 +40,7 @@ namespace GameOne
             _eventWorld = new EcsEventWorld();
             _timeService = new TimeService();
             gameService = new GameService();
+            gameService.SetMode(EGameMode.LevelMode);
             var e = _world.NewEntity();
             _world.DelEntity(e);
             

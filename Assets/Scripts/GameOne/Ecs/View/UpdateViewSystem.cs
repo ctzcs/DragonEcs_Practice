@@ -5,6 +5,9 @@ using UnityEngine;
 
 namespace GameOne.Ecs
 {
+    /// <summary>
+    /// 更新视图的位置
+    /// </summary>
     public class UpdateViewSystem : IEcsRun
     {
         [EcsInject] EcsDefaultWorld _world;
@@ -24,8 +27,10 @@ namespace GameOne.Ecs
 
                 view.elapsedTime += _timeService.deltaTime;
                 
+                //换新目标
                 if (logicTransform.position != view.targetPos)
                 { 
+                    view.startPos = view.transform.position;
                     view.targetPos = logicTransform.position;
                     view.elapsedTime = 0;
                 }

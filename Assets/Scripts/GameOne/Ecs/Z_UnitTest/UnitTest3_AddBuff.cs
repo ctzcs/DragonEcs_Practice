@@ -2,7 +2,7 @@
 using GameOne.Ecs.Input;
 using UnityEngine;
 
-namespace GameOne.Ecs.UnitTest
+namespace GameOne.Ecs.Z_UnitTest
 {
     public class UnitTest3_AddBuff : IEcsFixedRunProcess
     {

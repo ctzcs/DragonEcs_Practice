@@ -1,6 +1,6 @@
 ﻿using DCFApixels.DragonECS;
 
-namespace GameOne.Ecs.UnitTest
+namespace GameOne.Ecs.Z_UnitTest
 {
     class UnitTest2Module : IEcsModule
     {

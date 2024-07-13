@@ -31,4 +31,4 @@ MonoBehaviour:
       type: {class: CarryBuffsTemplate, ns: GameOne.Ecs, asm: Assembly-CSharp}
       data:
         component:
-          buffs: []
+          buffEntlList: []

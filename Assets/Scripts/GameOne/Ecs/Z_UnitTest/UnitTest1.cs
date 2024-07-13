@@ -2,7 +2,7 @@
 using GameOne.Ecs.Input;
 using UnityEngine;
 
-namespace GameOne.Ecs.UnitTest
+namespace GameOne.Ecs.Z_UnitTest
 {
     /// <summary>
     /// 用空格创建地图

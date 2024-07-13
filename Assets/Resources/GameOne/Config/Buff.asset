@@ -16,26 +16,26 @@ MonoBehaviour:
   - rid: 7039791835571028944
   - rid: 7039791822519402719
   - rid: 7039791822519402718
-  - rid: 7039791662605533187
   - rid: 7039791662605533186
+  - rid: 5373547555412246528
   references:
     version: 2
     RefIds:
-    - rid: 7039791662605533186
-      type: {class: BuffTemplate, ns: GameOne.Ecs, asm: Assembly-CSharp}
-      data:
-        component:
-          id: 
-    - rid: 7039791662605533187
+    - rid: 5373547555412246528
       type: {class: Buff_HealthModTemplate, ns: GameOne.Ecs, asm: Assembly-CSharp}
       data:
         component:
           addHealth: 0
           multiHealth: 0
-          addMaxHealth: 1
+          addMaxHealth: 0
           multiMaxHealth: 0
           addMinHealth: 0
           multiMinHealth: 0
+    - rid: 7039791662605533186
+      type: {class: BuffTemplate, ns: GameOne.Ecs, asm: Assembly-CSharp}
+      data:
+        component:
+          id: 
     - rid: 7039791822519402718
       type: {class: BuffOnRemoveTemplate, ns: GameOne.Ecs, asm: Assembly-CSharp}
       data:

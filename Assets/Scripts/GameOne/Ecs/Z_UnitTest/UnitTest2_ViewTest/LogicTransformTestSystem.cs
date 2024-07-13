@@ -2,7 +2,7 @@
 using DCFApixels.DragonECS;
 using UnityEngine;
 
-namespace GameOne.Ecs.UnitTest
+namespace GameOne.Ecs.Z_UnitTest
 {
     public class LogicTransformTestSystem : IEcsFixedRunProcess
     {

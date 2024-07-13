@@ -1,5 +1,6 @@
 ﻿using DCFApixels.DragonECS;
 using GameOne.Ecs.Input;
+using GameOne.Service;
 using UnityEngine;
 
 namespace GameOne.Ecs
