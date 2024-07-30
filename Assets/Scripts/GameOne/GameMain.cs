@@ -27,12 +27,11 @@ namespace GameOne
 
         /*private EcsUpdateRunner _updateRunner;*/
         private TurnBasedProcessRunner _turnBasedRunner;
+        
         private TimeService _timeService;
         private GameService gameService;
         private float _elapsedTime;
         // Start is called before the first frame update
-
-        
         
         private void Start()
         {

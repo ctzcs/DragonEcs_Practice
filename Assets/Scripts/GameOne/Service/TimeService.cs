@@ -2,6 +2,9 @@
 
 namespace GameOne
 {
+    /// <summary>
+    /// 存储时间
+    /// </summary>
     public class TimeService
     {
         public float deltaTime = 0.02f;
