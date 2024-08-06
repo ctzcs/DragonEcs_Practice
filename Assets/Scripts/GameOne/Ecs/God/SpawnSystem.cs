@@ -37,7 +37,6 @@ namespace GameOne.Ecs
             container.itemIds = new List<entlong>();
             
             
-            
         }
         
 

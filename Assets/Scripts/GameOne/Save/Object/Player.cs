@@ -36,7 +36,7 @@ namespace GameOne.Object
                 foreach (var itemLongId in itemIds)
                 {
                     var itemId = itemLongId.ID;
-                    Object.Item item = new Object.Item();
+                    Item item = new Item();
             
                     items.Add(item);
                 }

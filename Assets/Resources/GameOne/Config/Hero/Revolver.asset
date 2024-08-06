@@ -16,9 +16,15 @@ MonoBehaviour:
   - rid: 7039791822519402848
   - rid: 7039791676545564674
   - rid: 7039791676545564673
+  - rid: 1094516662619079578
   references:
     version: 2
     RefIds:
+    - rid: 1094516662619079578
+      type: {class: BuffOnAddTemplate, ns: GameOne.Ecs, asm: Assembly-CSharp}
+      data:
+        component:
+          funcName: 
     - rid: 7039791676545564673
       type: {class: PlayerTagTemplate, ns: GameOne.Ecs, asm: Assembly-CSharp}
       data: {}

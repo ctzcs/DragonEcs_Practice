@@ -27,7 +27,7 @@ namespace GameOne.Ecs
         }
         public void FixedRun()
         {
-            
+            //Mod池
             var buffModPool = _world.GetPool<TBuffMod>();
             _world.Where(out BuffCarrierAspect carrierAspect);
             foreach (var ent in _eWorld.Where(out Aspect aspect))
@@ -61,10 +61,7 @@ namespace GameOne.Ecs
                 }
                 
             }
-
             
-
-
         }
     }
 }
