@@ -1,5 +1,6 @@
 ﻿using DCFApixels.DragonECS;
 using GameOne.Ecs.Input;
+using GameOne.Service;
 using UnityEngine;
 
 namespace GameOne.Ecs.Z_UnitTest
@@ -9,8 +10,9 @@ namespace GameOne.Ecs.Z_UnitTest
     /// </summary>
     public class UnitTest1:IEcsRun
     {
-        [EcsInject] private EcsDefaultWorld _world;
+        [EcsInject]private EcsDefaultWorld _world;
         [EcsInject]private EcsEventWorld _eWorld;
+        [EcsInject] private GameService _gameService;
 
         class Aspect:EcsAspect
         {
@@ -26,6 +28,11 @@ namespace GameOne.Ecs.Z_UnitTest
                     var entity = _eWorld.NewEntity();
                     ref var createMapEvent = ref _eWorld.GetPool<CreateMapEvent>().Add(entity);
                     createMapEvent.Set(10,10);
+                }
+                else if (keyPressEvent.key == KeyCode.S)
+                {
+                    var entity = _eWorld.NewEntity();
+                    
                 }
             }
         }

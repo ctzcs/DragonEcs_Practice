@@ -22,6 +22,11 @@ namespace GameOne.Ecs
         {
             foreach (var entity in _world.Where(out Aspect pool))
             {
+                EcsSpan a = _world.Where(out pool);
+                EcsReadonlyGroup g = a.WhereToGroup(out Aspect pool1);
+                EcsReadonlyGroup g1 = a.WhereToGroup(out Aspect pool2);
+                g.Clone().UnionWith(g1.Clone());
+                
                 ref readonly var logicTransform = ref entity.Read(pool.LogicTransform);
                 ref var view = ref entity.Get(pool.View);
 
@@ -49,6 +54,7 @@ namespace GameOne.Ecs
                 
                 
             }
+            
         }
     }
 }
