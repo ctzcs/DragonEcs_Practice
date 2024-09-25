@@ -8,19 +8,24 @@ namespace GameOne.Ecs.Z_UnitTest
     {
         [EcsInject] EcsDefaultWorld _world;
 
+        private static readonly EcsProfilerMarker marker = new EcsProfilerMarker("SomeMarker");
         class Aspect:EcsAspect
         {
             public EcsPool<LogicTransform> LogicTransform = Inc;
         }
         public void FixedRun()
         {
-            foreach (var entity in _world.Where(out Aspect pools))
-            {
-               ref var logicTransform = ref entity.Get(pools.LogicTransform);
+            
+                foreach (var entity in _world.Where(out Aspect pools))
+                {
+                
+                    ref var logicTransform = ref entity.Get(pools.LogicTransform);
                
-               logicTransform.position += Random.insideUnitSphere;
+                    logicTransform.position += Random.insideUnitSphere;
                
-            }
+                }
+            
+            
         }
     }
 }
