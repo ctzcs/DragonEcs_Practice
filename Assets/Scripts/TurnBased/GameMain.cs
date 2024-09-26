@@ -2,7 +2,6 @@ using System.Globalization;
 using DCFApixels.DragonECS;
 using GameOne.Ecs;
 using GameOne.Ecs.Input;
-using GameOne.Ecs.Process;
 using GameOne.Ecs.Z_UnitTest;
 using GameOne.Service;
 using UnityEngine;
@@ -26,7 +25,7 @@ namespace GameOne
         private EcsPipeline _pipeline;
 
         /*private EcsUpdateRunner _updateRunner;*/
-        private TurnBasedProcessRunner _turnBasedRunner;
+       
         
         private TimeService _timeService;
         private GameService gameService;
@@ -62,7 +61,7 @@ namespace GameOne
             
             _timeService.fixedDeltaTime = 1f;
             //自定义的更新函数
-            _turnBasedRunner = _pipeline.GetRunnerInstance<TurnBasedProcessRunner>();
+           
             /*_updateRunner = _pipline.GetRunnerInstance<EcsUpdateRunner>();*/
             
             ChangeTurnEvent.ChangeTurn(_eventWorld,LevelMode.ETurn.RoundStart);
@@ -87,14 +86,7 @@ namespace GameOne
             
         }
 
-        /// <summary>
-        /// 根据计算跑一回合
-        /// </summary>
-        public void RunOneTurn()
-        {
-            //跑一回合
-            _turnBasedRunner.RunTurn();
-        }
+        
         
         
 

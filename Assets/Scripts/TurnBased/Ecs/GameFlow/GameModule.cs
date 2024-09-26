@@ -8,8 +8,6 @@ namespace GameOne.Ecs
         public void Import(EcsPipeline.Builder b)
         {
             b.Add(new ChangeTurnSystem())
-                .Add(new TurnBasedSystem())
-                .Add(new RoundStartSystem())
                 .Add(new LastRoundChangeWhenRoundEndSystem())
                 .AutoDel<RoundEndEvent>()
                 .AutoDel<RoundStartEvent>()
