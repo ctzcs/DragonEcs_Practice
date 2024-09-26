@@ -12,7 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d2b62f9703592042befb46ac1fee09c, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: 
-  _components: []
+  _components:
+  - rid: 6950311566710931456
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 6950311566710931456
+      type: {class: PlayerDataTemplate, ns: Survivor.Player, asm: Assembly-CSharp}
+      data:
+        component:
+          exp: 0
+          money: 0
