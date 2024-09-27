@@ -13,13 +13,18 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: 
   _components:
-  - rid: 6950311566710931456
+  - rid: 6950311584980795393
+  - rid: 6950311584980795395
   references:
     version: 2
     RefIds:
-    - rid: 6950311566710931456
-      type: {class: PlayerDataTemplate, ns: Survivor.Player, asm: Assembly-CSharp}
+    - rid: 6950311584980795393
+      type: {class: PlayerTagTemplate, ns: Survivor.Player, asm: Assembly-CSharp}
+      data: {}
+    - rid: 6950311584980795395
+      type: {class: HealthTemplate, ns: Survivor.Property.Health, asm: Assembly-CSharp}
       data:
         component:
-          exp: 0
-          money: 0
+          health: 0
+          maxHealth: 0
+          minHealth: 0

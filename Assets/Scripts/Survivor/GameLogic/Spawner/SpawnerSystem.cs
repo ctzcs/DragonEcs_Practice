@@ -9,7 +9,7 @@ namespace Survivor.GameLogic.Spawner
 
         private class Aspect:EcsAspect
         {
-            public EcsPool<Evt_Spawner> spawner;
+            public EcsPool<Act_Spawn> spawner;
         }
         public void FixedRun()
         {
@@ -17,7 +17,7 @@ namespace Survivor.GameLogic.Spawner
             {
                 //通过id将配置的资源创建出来，并分配位置
                 
-                //添加上AfterSpawnerTag,变成Ready状态，
+                //如果创建成功，发送创建成功事件
                 
             }
         }
