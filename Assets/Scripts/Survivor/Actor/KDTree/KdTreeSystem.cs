@@ -21,9 +21,6 @@ namespace Survivor.Actor
                 tree = new KDTree(cloud.ToArray())
             };
             god.Add(ref kdCloud);
-            
-            
-            
         }
 
         class Aspect:EcsAspect
@@ -33,6 +30,10 @@ namespace Survivor.Actor
         }
         public void Run()
         {
+            /*
+             * 重建点云
+             * 重建树
+             */
             int index = 0;
             entlong god = _world.Get<WorldData>().god;
             ref KdCloud kdCloud = ref god.Get<KdCloud>();
