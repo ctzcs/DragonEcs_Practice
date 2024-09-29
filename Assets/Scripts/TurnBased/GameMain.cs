@@ -50,7 +50,6 @@ namespace GameOne
                 .AddModule(new InputModule())
                 .AddModule(new GameModule())
                 .AddModule(new ViewModule())
-
                 .AddModule(new UnitTestModule())
 
                 .AddUnityDebug(_world,_eventWorld)

@@ -3,11 +3,10 @@ using DCFApixels.DragonECS;
 
 namespace Survivor.Global
 {
-    [MetaGroup("Survivor/GlobalData")]
+    [MetaGroup("Survivor/Global")]
     [Serializable]
     public struct GlobalData:IEcsComponent
     {
-        
         /// <summary>
         /// 全局金币
         /// </summary>

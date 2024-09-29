@@ -15,21 +15,7 @@ namespace Survivor.Property
     class HealthTemplate : ComponentTemplate<Health>
     {
     }
-
-    public struct Act_Damage : IEcsComponent
-    {
-        public entlong from;
-        public entlong to;
-        public int damage;
-    }
-
-    public struct Act_Heal : IEcsComponent
-    {
-        public entlong from;
-        public entlong to;
-        public int heal;
-    }
-
+    
     public struct Evt_HealthChange
     {
         public entlong target;

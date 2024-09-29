@@ -11,6 +11,7 @@ namespace Survivor.Player
         public int money;
     }
     
+    [Serializable]
     public class PlayerDataTemplate:ComponentTemplate<PlayerData>{}
     
     

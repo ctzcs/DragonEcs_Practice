@@ -1,7 +1,7 @@
 ﻿
 using DCFApixels.DragonECS;
 
-namespace Survivor.GameLogic.Spawner
+namespace Survivor.GameLogic
 {
     public class SpawnerSystem:IEcsFixedRunProcess
     {
