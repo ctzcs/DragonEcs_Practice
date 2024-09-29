@@ -12,19 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d2b62f9703592042befb46ac1fee09c, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: 
-  _components:
-  - rid: 6950311584980795393
-  - rid: 6950311584980795395
+  _components: []
   references:
     version: 2
-    RefIds:
-    - rid: 6950311584980795393
-      type: {class: PlayerTagTemplate, ns: Survivor.Player, asm: Assembly-CSharp}
-      data: {}
-    - rid: 6950311584980795395
-      type: {class: HealthTemplate, ns: Survivor.Property.Health, asm: Assembly-CSharp}
-      data:
-        component:
-          health: 0
-          maxHealth: 0
-          minHealth: 0
+    RefIds: []

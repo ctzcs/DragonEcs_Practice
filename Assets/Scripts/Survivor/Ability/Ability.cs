@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Survivor.Ability
 {
     
-    [MetaGroup("Survivor/Ablity")]
+    [MetaGroup("Survivor/Ability")]
     [Serializable]
     public struct AbilityCarrier : IEcsComponent
     {

@@ -5,8 +5,7 @@ namespace Survivor.GameLogic.Spawner
 {
     public class SpawnerSystem:IEcsFixedRunProcess
     {
-        [EcsInject] EcsEventWorld _world;
-
+        [EcsInject]private EcsWorld _world;
         private class Aspect:EcsAspect
         {
             public EcsPool<Act_Spawn> spawner;
