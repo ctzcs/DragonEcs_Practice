@@ -1,5 +1,4 @@
 ﻿using DCFApixels.DragonECS;
-using Survivor.Input;
 using UnityEngine;
 
 namespace Survivor.Global
@@ -12,7 +11,7 @@ namespace Survivor.Global
             var god = Object.Instantiate(Resources.Load<ScriptableEntityTemplate>("Survivor/God"));
             ref WorldData data = ref _world.Get<WorldData>();
             data.god = _world.NewEntityLong(god);
-
+            EcsDebug.Print("Create God");
             
         }
     }

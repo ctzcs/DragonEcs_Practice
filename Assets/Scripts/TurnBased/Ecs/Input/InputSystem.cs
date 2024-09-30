@@ -22,6 +22,9 @@ namespace GameOne.Ecs.Input
         public void Run()
         {
             ref var input = ref _world.Get<WorldInput>();
+            input.mousePosition = UnityEngine.Input.mousePosition;
+            input.mousePosition.z = 0;
+            if (Camera.main != null) input.mouseWorldPosition = Camera.main.ScreenToWorldPoint(input.mousePosition);
             foreach (var keyCode in input.CheckList)
             {
                 CheckKey(keyCode);

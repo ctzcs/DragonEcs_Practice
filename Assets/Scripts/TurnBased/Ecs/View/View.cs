@@ -11,17 +11,15 @@ namespace GameOne.Ecs
         /// 连接Transform的位置
         /// </summary>
 		public UnityEngine.Transform transform;
-        /// <summary>
-        /// 插值开始的位置
-        /// </summary>
-        public Vector3 startPos;
-        /// <summary>
-        /// 插值结束的位置
-        /// </summary>
-        public Vector3 targetPos;
-        /// <summary>
-        ///插值时间流失缓存 
-        /// </summary>
-        public float elapsedTime;
+
+        public SpriteRenderer sp;
+        
+        public Color Color;
+        
+        public Vector3 prePos;
+        public Vector3 nextPos;
+
+        public float preScaleRate;
+        public float nextScaleRate;
     }
 }

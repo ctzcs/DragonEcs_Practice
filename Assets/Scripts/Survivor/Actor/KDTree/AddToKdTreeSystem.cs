@@ -5,14 +5,15 @@ using DCFApixels.DragonECS;
 
 namespace Survivor.Actor
 {
-    public class AddToKdTreeSystem:IEcsRun
+    public class AddToKdTreeSystem:IEcsFixedRunProcess
     {
         [EcsInject] private EcsDefaultWorld _world;
         class Aspect:EcsAspect
         {
             public EcsPool<Evt_AddToKdTree> AddToKdTree = Inc;
         }
-        public void Run()
+
+        public void FixedRun()
         {
             //给实体添加KdAgent
             foreach (var evt in _world.Where(out Aspect aspect))

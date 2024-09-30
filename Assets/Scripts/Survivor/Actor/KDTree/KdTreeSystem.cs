@@ -2,33 +2,39 @@
 using Base;
 using DataStructures.ViliWonka.KDTree;
 using DCFApixels.DragonECS;
+using GameOne.Ecs;
 using Survivor.Global;
-using Survivor.Property;
 using UnityEngine;
 
 namespace Survivor.Actor
 {
-    public class KdTreeSystem:IEcsInit,IEcsRun
+    public class KdTreeSystem:IEcsInit,IEcsFixedRunProcess
     {
-        private EcsDefaultWorld _world;
+        [EcsInject]private EcsDefaultWorld _world;
         public void Init()
         {
-            entlong god = _world.Get<WorldData>().god;
-            List<Vector3> cloud = new();
+            entlong god = _world.God();
+            List<Vector3> cloud = new(10000);
             KdCloud kdCloud = new KdCloud
             {
                 points = cloud,
-                tree = new KDTree(cloud.ToArray())
+                entities = new List<entlong>(),
+                tree = new KDTree(cloud.ToArray()),
+                
             };
             god.Add(ref kdCloud);
+            
         }
 
         class Aspect:EcsAspect
         {
             public EcsPool<KdAgent> KdAgent = Inc;
-            public EcsPool<VelPos> VelPos = Inc;
+            //TODO 这里用的GameOne中的LogicTransform
+            //public EcsPool<VelPos> VelPos = Inc;
+            public EcsPool<LogicTransform> VelPos = Inc;
         }
-        public void Run()
+
+        public void FixedRun()
         {
             /*
              * 重建点云
@@ -38,27 +44,18 @@ namespace Survivor.Actor
             entlong god = _world.Get<WorldData>().god;
             ref KdCloud kdCloud = ref god.Get<KdCloud>();
             kdCloud.entities.Clear();
+            kdCloud.points.Clear();
             foreach (var kdAgent in _world.Where(out Aspect aspect))
             {
                 aspect.KdAgent.Get(kdAgent).index = index;
                 kdCloud.entities.Add(kdAgent.ToEntityLong(_world));
-                kdCloud.points.Add(aspect.VelPos.Get(kdAgent).pos);
+                
+                kdCloud.points.Add(aspect.VelPos.Get(kdAgent).position);
+                
                 ++index;
             }
             
-            kdCloud.tree.Build(kdCloud.tree.Points);
+            kdCloud.tree.Build(kdCloud.points);
         }
-    }
-    
-    
-    public static partial class Utils
-    {
-        private static readonly KDQuery query = new KDQuery();
-
-        public static void KdQuery_Radius(KDTree tree, Vector3 queryPosition, float queryRadius, List<int> resultIndices)
-        {
-            query.Radius(tree,queryPosition, queryRadius,resultIndices);
-        }
-            
     }
 }

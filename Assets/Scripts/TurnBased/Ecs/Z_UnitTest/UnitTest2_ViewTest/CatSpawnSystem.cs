@@ -1,5 +1,6 @@
 ﻿using Base;
 using DCFApixels.DragonECS;
+using Survivor.Actor;
 using UnityEngine;
 
 namespace GameOne.Ecs.Z_UnitTest
@@ -7,7 +8,7 @@ namespace GameOne.Ecs.Z_UnitTest
     public class CatSpawnSystem : IEcsInit
     {
         [EcsInject] EcsDefaultWorld _world;
-        private int entityCount = 5000;
+        private int entityCount = 10000;
         public void Init()
         {
             ViewTest();
@@ -23,6 +24,7 @@ namespace GameOne.Ecs.Z_UnitTest
             {
                 Vector2 position = Random.insideUnitCircle;
                 var entity = _world.NewEntityLong();
+                
                 //链接GameObject
                 GameObject catInstance = UnityEngine.Object.Instantiate(cat);
                 entity.Connect(catInstance,false);
@@ -32,13 +34,22 @@ namespace GameOne.Ecs.Z_UnitTest
                     position = position,
                 };
                 entity.Add(ref logicTransform);
+                
 
                 View view = new View()
                 {
                     transform = catInstance.transform,
-                    elapsedTime = 0,
+                    sp = catInstance.GetComponent<SpriteRenderer>(),
+                    Color = Color.white
                 };
                 entity.Add(ref view);
+                
+                //KdTree
+                Evt_AddToKdTree addToKdTree = new Evt_AddToKdTree
+                {
+                    target = entity
+                };
+                _world.NewEntityLong().Add(ref addToKdTree);
             }
         }
     }

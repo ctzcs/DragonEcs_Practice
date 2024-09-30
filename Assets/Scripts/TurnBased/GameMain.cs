@@ -1,11 +1,14 @@
 using System.Globalization;
+using Base;
 using DCFApixels.DragonECS;
 using GameOne.Ecs;
 using GameOne.Ecs.Input;
 using GameOne.Ecs.Z_UnitTest;
 using GameOne.Service;
+using Survivor.Global;
 using UnityEngine;
 using UnityEngine.UI;
+using Time = UnityEngine.Time;
 
 namespace GameOne
 {
@@ -47,6 +50,7 @@ namespace GameOne
                 .Inject(_eventWorld)
                 .Inject(_timeService)
                 .Inject(gameService)
+                .AddModule(new GlobalModule())
                 .AddModule(new InputModule())
                 .AddModule(new GameModule())
                 .AddModule(new ViewModule())
@@ -75,9 +79,10 @@ namespace GameOne
             float deltaTime = Time.deltaTime;
             _timeService.deltaTime = deltaTime;
             _timeService.elapsedTime += deltaTime;
-            
+            _timeService.time = Time.time;
             while (_timeService.elapsedTime > _timeService.fixedDeltaTime)
             {
+                _timeService.fixedTime = Time.fixedTime;
                 _pipeline.FixedRun();
                 _timeService.elapsedTime -= _timeService.fixedDeltaTime;
                 //显示帧率

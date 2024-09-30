@@ -189,8 +189,22 @@ namespace Base
 
 
         #endregion
+
+        #region World
+
+        public static EcsPool<T> Pool<T>(this EcsWorld world) where T:struct,IEcsComponent
+        {
+            return world.GetPoolInstance<EcsPool<T>>();
+        }
+        
+        public static EcsTagPool<T> TagPool<T>(this EcsWorld world) where T:struct,IEcsTagComponent
+        {
+            return world.GetPoolInstance<EcsTagPool<T>>();
+        }
         
         
+
+        #endregion
     }
         
        

@@ -8,7 +8,8 @@ namespace GameOne.Ecs.Input
     {
         private string _name;
         private List<KeyCode> _checkList;
-
+        public Vector3 mousePosition;
+        public Vector3 mouseWorldPosition;
         public string Name => _name;
         public List<KeyCode> CheckList => _checkList;
         

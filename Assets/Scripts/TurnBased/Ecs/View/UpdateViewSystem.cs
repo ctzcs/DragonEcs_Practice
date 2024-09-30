@@ -1,6 +1,7 @@
 ﻿
 using Base;
 using DCFApixels.DragonECS;
+using Unity.XR.OpenVR;
 using UnityEngine;
 
 namespace GameOne.Ecs
@@ -8,7 +9,7 @@ namespace GameOne.Ecs
     /// <summary>
     /// 更新视图的位置
     /// </summary>
-    public class UpdateViewSystem : IEcsRun
+    public class UpdateViewSystem : IEcsFixedRunProcess,IEcsRun
     {
         [EcsInject] EcsDefaultWorld _world;
         [EcsInject] TimeService _timeService;
@@ -18,31 +19,48 @@ namespace GameOne.Ecs
             public EcsPool<LogicTransform> LogicTransform = Inc;
         }
         
+        public void FixedRun()
+        {
+            foreach (var ent in _world.Where(out Aspect pool))
+            {
+                ref readonly var logicTransform = ref ent.Read(pool.LogicTransform);
+                ref var view = ref ent.Get(pool.View);
+                UnityEngine.Transform transform = view.transform;
+                view.prePos = transform.position;
+                view.nextPos = logicTransform.position;
+                view.preScaleRate = transform.localScale.x;
+                view.nextScaleRate = logicTransform.scaleRate;
+            }
+        }
+        
         public void Run()
         {
             foreach (var entity in _world.Where(out Aspect pool))
             {
-                EcsSpan a = _world.Where(out pool);
+                /*EcsSpan a = _world.Where(out pool);*/
                 // EcsReadonlyGroup g = a.WhereToGroup(out Aspect pool1);
                 // EcsReadonlyGroup g1 = a.WhereToGroup(out Aspect pool2);
                 // g.Clone().UnionWith(g1.Clone());
                 
                 ref readonly var logicTransform = ref entity.Read(pool.LogicTransform);
                 ref var view = ref entity.Get(pool.View);
-
-                view.elapsedTime += _timeService.deltaTime;
+                
                 
                 //换新目标
-                if (logicTransform.position != view.targetPos)
+                /*if (logicTransform.position != view.targetPos)
                 { 
                     view.startPos = view.transform.position;
                     view.targetPos = logicTransform.position;
                     view.elapsedTime = 0;
-                }
+                }*/
                 
                 //插值
-                float interpolationRatio = view.elapsedTime / _timeService.fixedDeltaTime;
-                if (interpolationRatio >= 1)
+                float interpolationRatio = _timeService.time - _timeService.fixedTime / _timeService.fixedDeltaTime;
+                view.transform.position = Vector3.Lerp(view.prePos,view.nextPos, interpolationRatio);
+                view.transform.localScale = Vector3.Lerp(view.preScaleRate * Vector3.one, 
+                    view.nextScaleRate * Vector3.one, interpolationRatio);
+                view.sp.color = view.Color;
+                /*if (interpolationRatio >= 1)
                 {
                     view.elapsedTime = 0;
                     view.transform.position = view.targetPos;
@@ -50,11 +68,13 @@ namespace GameOne.Ecs
                 else
                 {
                     view.transform.position = Vector3.Lerp(view.startPos,view.targetPos, interpolationRatio);
-                }
-                
-                
+                }*/
+
+
             }
             
         }
+
+        
     }
 }

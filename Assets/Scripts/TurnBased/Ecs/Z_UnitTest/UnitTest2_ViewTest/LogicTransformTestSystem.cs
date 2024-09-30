@@ -7,10 +7,6 @@ namespace GameOne.Ecs.Z_UnitTest
     public class LogicTransformTestSystem : IEcsFixedRunProcess
     {
         [EcsInject] EcsDefaultWorld _world;
-#if UNITY_EDITOR
-        private static readonly EcsProfilerMarker marker = new EcsProfilerMarker("SomeMarker");
-#endif
-        
         class Aspect:EcsAspect
         {
             public EcsPool<LogicTransform> LogicTransform = Inc;
@@ -22,9 +18,12 @@ namespace GameOne.Ecs.Z_UnitTest
                 {
                 
                     ref var logicTransform = ref entity.Get(pools.LogicTransform);
-               
-                    logicTransform.position += Random.insideUnitSphere;
-               
+
+                    Vector3 offset = Random.insideUnitSphere;
+                    offset.z = 0;
+                    logicTransform.position += offset;
+                    logicTransform.scaleRate = Random.Range(0, 1f);
+
                 }
             
             
