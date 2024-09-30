@@ -6,7 +6,7 @@ namespace GameOne.Ecs
     {
         public void Import(EcsPipeline.Builder b)
         {
-            b.AddModule(new BuffModule())
+            b//.AddModule(new BuffModule())
                 .AddModule(new HealthModule());
         }
     }

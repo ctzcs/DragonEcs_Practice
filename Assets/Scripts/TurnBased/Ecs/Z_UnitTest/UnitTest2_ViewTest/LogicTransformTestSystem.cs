@@ -7,8 +7,10 @@ namespace GameOne.Ecs.Z_UnitTest
     public class LogicTransformTestSystem : IEcsFixedRunProcess
     {
         [EcsInject] EcsDefaultWorld _world;
-
+#if UNITY_EDITOR
         private static readonly EcsProfilerMarker marker = new EcsProfilerMarker("SomeMarker");
+#endif
+        
         class Aspect:EcsAspect
         {
             public EcsPool<LogicTransform> LogicTransform = Inc;

@@ -51,13 +51,15 @@ namespace GameOne
                 .AddModule(new GameModule())
                 .AddModule(new ViewModule())
                 .AddModule(new UnitTestModule())
-
+#if UNITY_EDITOR
                 .AddUnityDebug(_world,_eventWorld)
+#endif
+                
                 .AutoInject()
                 .BuildAndInit();
-            
+#if UNITY_EDITOR          
             UnityDebugService.Activate();
-            
+#endif
             _timeService.fixedDeltaTime = 1f;
             //自定义的更新函数
            
