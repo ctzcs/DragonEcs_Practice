@@ -2,8 +2,8 @@
 using Base;
 using DataStructures.ViliWonka.KDTree;
 using DCFApixels.DragonECS;
-using GameOne.Ecs;
 using Survivor.Global;
+using Survivor.Property;
 using UnityEngine;
 
 namespace Survivor.Actor
@@ -30,8 +30,8 @@ namespace Survivor.Actor
         {
             public EcsPool<KdAgent> KdAgent = Inc;
             //TODO 这里用的GameOne中的LogicTransform
-            //public EcsPool<VelPos> VelPos = Inc;
-            public EcsPool<LogicTransform> VelPos = Inc;
+            public EcsPool<VelPos> VelPos = Inc;
+            //public EcsPool<LogicTransform> VelPos = Inc;
         }
 
         public void FixedRun()

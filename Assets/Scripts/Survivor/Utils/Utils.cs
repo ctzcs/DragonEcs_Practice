@@ -27,6 +27,16 @@ namespace Survivor
         {
             query.KNearest(tree,queryPosition,k,resultIndices,resultDistances);
         }
+
+        public static void KdQuery_Interval(KDTree tree, Vector3 min, Vector3 max, List<int> resultIndices)
+        {
+            query.Interval(tree,min,max,resultIndices);
+        }
+
+        public static void KdQuery_Closest(KDTree tree, Vector3 queryPosition, List<int> resultIndices, List<float> resultDistances = null)
+        {
+            query.ClosestPoint(tree,queryPosition,resultIndices,resultDistances);
+        }
             
     }
 }

@@ -1,6 +1,7 @@
 ﻿
 using Base;
 using DCFApixels.DragonECS;
+using Survivor.Property;
 using Unity.XR.OpenVR;
 using UnityEngine;
 
@@ -16,20 +17,20 @@ namespace GameOne.Ecs
         class Aspect:EcsAspect
         {
             public EcsPool<View> View = Inc;
-            public EcsPool<LogicTransform> LogicTransform = Inc;
+            public EcsPool<VelPos> velPos = Inc;
         }
         
         public void FixedRun()
         {
             foreach (var ent in _world.Where(out Aspect pool))
             {
-                ref readonly var logicTransform = ref ent.Read(pool.LogicTransform);
+                ref readonly var velPos = ref ent.Read(pool.velPos);
                 ref var view = ref ent.Get(pool.View);
                 UnityEngine.Transform transform = view.transform;
                 view.prePos = transform.position;
-                view.nextPos = logicTransform.position;
+                view.nextPos = velPos.position;
                 view.preScaleRate = transform.localScale.x;
-                view.nextScaleRate = logicTransform.scaleRate;
+                view.nextScaleRate = velPos.scaleRate;
             }
         }
         
@@ -42,7 +43,7 @@ namespace GameOne.Ecs
                 // EcsReadonlyGroup g1 = a.WhereToGroup(out Aspect pool2);
                 // g.Clone().UnionWith(g1.Clone());
                 
-                ref readonly var logicTransform = ref entity.Read(pool.LogicTransform);
+                ref readonly var logicTransform = ref entity.Read(pool.velPos);
                 ref var view = ref entity.Get(pool.View);
                 
                 

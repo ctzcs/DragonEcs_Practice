@@ -1,6 +1,7 @@
 ﻿using Base;
 using DCFApixels.DragonECS;
 using Survivor.Actor;
+using Survivor.Property;
 using UnityEngine;
 
 namespace GameOne.Ecs.Z_UnitTest
@@ -8,7 +9,7 @@ namespace GameOne.Ecs.Z_UnitTest
     public class CatSpawnSystem : IEcsInit
     {
         [EcsInject] EcsDefaultWorld _world;
-        private int entityCount = 10000;
+        private int entityCount = 1000;
         public void Init()
         {
             ViewTest();
@@ -29,7 +30,7 @@ namespace GameOne.Ecs.Z_UnitTest
                 GameObject catInstance = UnityEngine.Object.Instantiate(cat);
                 entity.Connect(catInstance,false);
                 
-                LogicTransform logicTransform = new LogicTransform()
+                VelPos logicTransform = new VelPos()
                 {
                     position = position,
                 };

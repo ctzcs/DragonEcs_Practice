@@ -1,5 +1,6 @@
 ﻿using Base;
 using DCFApixels.DragonECS;
+using Survivor.Property;
 using UnityEngine;
 
 namespace GameOne.Ecs.Z_UnitTest
@@ -9,7 +10,7 @@ namespace GameOne.Ecs.Z_UnitTest
         [EcsInject] EcsDefaultWorld _world;
         class Aspect:EcsAspect
         {
-            public EcsPool<LogicTransform> LogicTransform = Inc;
+            public EcsPool<VelPos> velPos = Inc;
         }
         public void FixedRun()
         {
@@ -17,7 +18,7 @@ namespace GameOne.Ecs.Z_UnitTest
                 foreach (var entity in _world.Where(out Aspect pools))
                 {
                 
-                    ref var logicTransform = ref entity.Get(pools.LogicTransform);
+                    ref var logicTransform = ref entity.Get(pools.velPos);
 
                     Vector3 offset = Random.insideUnitSphere;
                     offset.z = 0;

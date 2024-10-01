@@ -16,7 +16,7 @@ namespace GameOne.Ecs
             foreach (var id in _world.Where(out Aspect aspect))
             {
                var deathEvent = aspect.DeathEvents.Get(id);
-               EcsDebug.Print($"{deathEvent.name} Death");
+               //EcsDebug.Print($"{deathEvent.name} Death");
                int entityId = deathEvent.whoEntl.ID;
                EcsWorld world = EcsWorld.GetWorld(deathEvent.whoEntl.WorldID);
                world.TryDelEntity(entityId);
