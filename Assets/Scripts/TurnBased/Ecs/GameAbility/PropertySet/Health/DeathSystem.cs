@@ -13,7 +13,7 @@ namespace GameOne.Ecs
         }
         public void FixedRun()
         {
-            foreach (var id in _world.Where(out Aspect aspect))
+            /*foreach (var id in _world.Where(out Aspect aspect))
             {
                var deathEvent = aspect.DeathEvents.Get(id);
                //EcsDebug.Print($"{deathEvent.name} Death");
@@ -23,7 +23,7 @@ namespace GameOne.Ecs
                //销毁该Object
                UnityEngine.Object.Destroy(world.GetPool<GameObjectConnect>().Get(entityId).Connect.gameObject);
                
-            }
+            }*/
         }
     }
 }

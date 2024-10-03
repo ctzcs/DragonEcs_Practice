@@ -45,19 +45,28 @@ namespace GameOne.Ecs.Z_UnitTest
             index.Clear();
             Vector3 mouseWorldPos = _world.Get<WorldInput>().mouseWorldPosition;
             mouseWorldPos.z = 0;
+            Vector3 offset = Vector3.one;
+            Vector3 offset1 = Vector3.one * 0.01f;
+            offset.z = 0;
+            offset1.z = 0;
             //EcsDebug.Print($"{mouseWorldPos}");
-            Survivor.Utils.KdQuery_Radius(kdCloud.tree,mouseWorldPos,1,index);
+            /*Survivor.Utils.KdQuery_Radius(kdCloud.tree,mouseWorldPos,1,index);*/
+            
+            
             EcsPool<View> viewPool = _world.GetPoolInstance<EcsPool<View>>();
             for (int i = 0; i < kdCloud.entities.Count; i++)
             {
-                
                 kdCloud.entities[i].Get(viewPool).Color = Color.white;
             }
 
+            index.Clear();
+            Survivor.Utils.KdQuery_Interval(kdCloud.tree,mouseWorldPos - offset,mouseWorldPos + offset,index);
             foreach (var ent in index)
             {
                 kdCloud.entities[ent].Get(viewPool).Color =  Color.blue;
             }
+            
+            
         }
     }
 }

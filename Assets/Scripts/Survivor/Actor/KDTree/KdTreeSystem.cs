@@ -14,12 +14,13 @@ namespace Survivor.Actor
         public void Init()
         {
             entlong god = _world.God();
-            List<Vector3> cloud = new(10000);
+            List<Vector3> cloud = new(2000);
+            Vector3[] treePoints = new Vector3[2000];
             KdCloud kdCloud = new KdCloud
             {
                 points = cloud,
                 entities = new List<entlong>(),
-                tree = new KDTree(cloud.ToArray()),
+                tree = new KDTree(treePoints),
                 
             };
             god.Add(ref kdCloud);
@@ -54,8 +55,8 @@ namespace Survivor.Actor
                 
                 ++index;
             }
-            
-            kdCloud.tree.Build(kdCloud.points);
+
+            kdCloud.UpdateKdTree();
         }
     }
 }

@@ -5,7 +5,14 @@ namespace Survivor.Physics
 {
     public struct BoxCollider:IEcsComponent
     {
-        public Vector3 min;
-        public Vector3 max;
+        public int index;
+        public float w;
+        public float h;
+        /*public CollisionLayer layer;
+        public CollisionLayer collisionWith;*/
     }
+    
+    
+    
+    
 }

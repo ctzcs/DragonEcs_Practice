@@ -7,9 +7,10 @@ namespace Survivor.Actor
         public int index;
     }
 
-
+    
     public struct Evt_AddToKdTree : IEcsComponent
     {
+        
         public entlong target;
     }
 }
