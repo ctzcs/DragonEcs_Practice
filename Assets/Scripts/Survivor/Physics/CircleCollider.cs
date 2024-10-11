@@ -12,8 +12,8 @@ namespace Survivor.Physics
         public float2 position;
         public bool collided;
         public bool trigger;
-        /*public CollisionLayer layer;
-        public CollisionLayer collideWith;*/
+        public CollisionLayer layer;
+        public CollisionLayer collideWith;
         public Vector3 offset;
         public override int GetHashCode() {
             return index;

@@ -8,8 +8,8 @@ namespace Survivor.Physics
         public int index;
         public float w;
         public float h;
-        /*public CollisionLayer layer;
-        public CollisionLayer collisionWith;*/
+        public CollisionLayer layer;
+        public CollisionLayer collisionWith;
     }
     
     
