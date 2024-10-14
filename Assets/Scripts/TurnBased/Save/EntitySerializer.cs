@@ -21,7 +21,7 @@ namespace GameOne
             public object value;
         }
     }
-    public class EntitySerialiser
+    public class EntitySerializer
     {
         public string Path = Application.dataPath + "/../Save";
         
@@ -40,7 +40,7 @@ namespace GameOne
             ReadOnlySpan<int> components = world.GetComponentTypeIDsFor(id);
             foreach (var component in components)
             {
-                var pool = world.GetPoolInstance(component);
+                var pool = world.FindPoolInstance(component);
                 object data = pool.GetRaw(id);
                 
                 entity.components.Add(new Entity.Component()
@@ -58,7 +58,7 @@ namespace GameOne
             var e= world.NewEntity(entity.id);
             foreach (var c in entity.components)
             {
-               var pool = world.GetPoolInstance(c.type);
+               var pool = world.FindPoolInstance(c.type);
                pool.AddRaw(e,c.value);
             }
         }

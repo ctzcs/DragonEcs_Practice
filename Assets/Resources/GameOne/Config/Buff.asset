@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Buff
   m_EditorClassIdentifier: 
   _components:
+  - rid: 7039791662605533186
   - rid: 7039791835571028944
+  - rid: 5373547555412246528
   - rid: 7039791822519402719
   - rid: 7039791822519402718
-  - rid: 7039791662605533186
-  - rid: 5373547555412246528
   references:
     version: 2
     RefIds:
@@ -31,23 +31,28 @@ MonoBehaviour:
           multiMaxHealth: 0
           addMinHealth: 0
           multiMinHealth: 0
+        _offset: 0
     - rid: 7039791662605533186
       type: {class: BuffTemplate, ns: GameOne.Ecs, asm: Assembly-CSharp}
       data:
         component:
           id: 
+        _offset: 0
     - rid: 7039791822519402718
       type: {class: BuffOnRemoveTemplate, ns: GameOne.Ecs, asm: Assembly-CSharp}
       data:
         component:
           funcName: PrintRemoveBuff
+        _offset: 0
     - rid: 7039791822519402719
       type: {class: BuffOnAddTemplate, ns: GameOne.Ecs, asm: Assembly-CSharp}
       data:
         component:
           funcName: PrintAddBuff
+        _offset: 0
     - rid: 7039791835571028944
       type: {class: LastRoundTemplate, ns: GameOne.Ecs, asm: Assembly-CSharp}
       data:
         component:
           round: 1
+        _offset: 0

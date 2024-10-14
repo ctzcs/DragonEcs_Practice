@@ -4,17 +4,18 @@ using UnityEngine;
 
 namespace Survivor.Physics
 {
+    [MetaGroup("Survivor/Physics/Collider")]
     public struct CircleCollider:IEcsComponent
     {
-        public int index;
-        public int cellIndex;
+        public float2 offset;
         public float radius;
-        public float2 position;
-        public bool collided;
-        public bool trigger;
         public CollisionLayer layer;
         public CollisionLayer collideWith;
-        public Vector3 offset;
+        
+        //NoConfig
+        public int index;
+        public float2 center;
+        public Bounds Bounds;
         public override int GetHashCode() {
             return index;
         }

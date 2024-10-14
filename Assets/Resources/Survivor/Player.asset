@@ -12,7 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d2b62f9703592042befb46ac1fee09c, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: 
-  _components: []
+  _components:
+  - rid: 1263296304508567552
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 1263296304508567552
+      type: {class: BoxColliderTemplate, ns: Survivor.Physics, asm: Assembly-CSharp}
+      data:
+        component:
+          index: 0
+          w: 0
+          h: 0
+          layer: 0
+          collisionWith: 0
+        _offset: 0
