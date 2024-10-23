@@ -1,5 +1,6 @@
 ﻿using DCFApixels.DragonECS;
 using UnityEngine;
+using Utility;
 
 namespace Survivor.Global
 {
@@ -12,6 +13,8 @@ namespace Survivor.Global
             ref WorldData data = ref _world.Get<WorldData>();
             data.god = _world.NewEntityLong(god);
             EcsDebug.Print("Create God");
+            MonoHelp.Init();
+            
             
         }
     }

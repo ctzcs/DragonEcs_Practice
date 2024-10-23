@@ -61,9 +61,9 @@ namespace GameOne.Ecs.Z_UnitTest
 
             index.Clear();
             Survivor.Utils.KdQuery_Interval(kdCloud.tree,mouseWorldPos - offset,mouseWorldPos + offset,index);
-            foreach (var ent in index)
+            foreach (var i in index)
             {
-                kdCloud.entities[ent].Get(viewPool).Color =  Color.blue;
+                kdCloud.entities[i].Get(viewPool).Color =  Color.blue;
             }
             
             

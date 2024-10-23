@@ -13,17 +13,25 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: 
   _components:
-  - rid: 1263296304508567552
+  - rid: 1263296507260961066
+  - rid: 1263296507260961072
   references:
     version: 2
     RefIds:
-    - rid: 1263296304508567552
-      type: {class: BoxColliderTemplate, ns: Survivor.Physics, asm: Assembly-CSharp}
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 1263296507260961066
+      type: {class: ShapeAgentTemplate, ns: Survivor.Physics, asm: Assembly-CSharp}
       data:
         component:
-          index: 0
-          w: 0
-          h: 0
+          type: 0
+          agent:
+            rid: -2
+        _offset: 0
+    - rid: 1263296507260961072
+      type: {class: PhysicsLayerTemplate, ns: Survivor.Physics, asm: Assembly-CSharp}
+      data:
+        component:
           layer: 0
-          collisionWith: 0
+          collideWith: 0
         _offset: 0

@@ -3,9 +3,12 @@ using DCFApixels.DragonECS;
 using Survivor.GameLogic;
 using Survivor.Global;
 using Survivor.Input;
+using Survivor.Physics;
 using Survivor.Service;
 using Survivor.Test;
 using UnityEngine;
+using Utility;
+using Time = Survivor.Global.Time;
 using ViewModule = Survivor.View.ViewModule;
 
 namespace Survivor
@@ -36,6 +39,7 @@ namespace Survivor
                 .AutoInject().Build();
                 //初始化游戏
                 Init();
+                
         }
 
 
@@ -46,7 +50,9 @@ namespace Survivor
             UnityDebugService.Activate();
 #endif
             _pipeline.Init();
+            
         }
+        
         
         public void FixedUpdate()
         {

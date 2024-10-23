@@ -1,4 +1,5 @@
 ﻿using DCFApixels.DragonECS;
+using Survivor.Physics;
 
 namespace Survivor.GameLogic
 {
@@ -6,7 +7,8 @@ namespace Survivor.GameLogic
     {
         public void Import(EcsPipeline.Builder b)
         {
-            b.Add(new InitBattleSystem());
+            b.Add(new InitBattleSystem())
+                .Add(new PhysicsSystem());
         }
     }
 }
