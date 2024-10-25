@@ -56,7 +56,7 @@ namespace GameOne.Ecs
                 }*/
                 
                 //插值
-                float interpolationRatio = _timeService.time - _timeService.fixedTime / _timeService.fixedDeltaTime;
+                float interpolationRatio = (_timeService.time - _timeService.fixedTime) / _timeService.fixedDeltaTime;
                 view.transform.position = Vector3.Lerp(view.prePos,view.nextPos, interpolationRatio);
                 view.transform.localScale = Vector3.Lerp(view.preScaleRate * Vector3.one, 
                     view.nextScaleRate * Vector3.one, interpolationRatio);

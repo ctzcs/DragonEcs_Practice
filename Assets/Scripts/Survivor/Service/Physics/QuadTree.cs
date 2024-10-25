@@ -1,44 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
+using NUnit.Framework;
 using Unity.Mathematics;
 using UnityEngine;
 using Utility;
 
-namespace Survivor.Physics
+namespace Service
 {
-    public struct Bounds
-    {
-        public float width;
-        public float height;
-        public float xMin;
-        public float yMin;
-        public Vector2 Center
-        {
-            [MethodImpl(MethodImplOptions.AggressiveInlining)] get => new(this.xMin + this.width / 2f, this.yMin + this.height / 2f);
-            [MethodImpl(MethodImplOptions.AggressiveInlining)] set
-            {
-                xMin = value.x - width / 2f;
-                yMin = value.y - height / 2f;
-            }
-        }
-        
-        public static Bounds None = new Bounds(0,0,0, 0);
-        public Bounds(float xMin,float yMin,float width, float height)
-        {
-            this.xMin = xMin;
-            this.yMin = yMin;
-            this.width = width;
-            this.height = height;
-        }
-        
-        public bool Contains(float2 pos)
-        {
-            return pos.x >= xMin && pos.x <= xMin + width
-                                 && pos.y >= yMin && pos.y <= yMin + height;
-        }
-    }
-
     
     public interface IShape
     {
@@ -107,7 +75,7 @@ namespace Survivor.Physics
             _queryList = new List<T>();
             _queryNodeStack = new Stack<Node>();
             _root = _nodePool.PopNode();
-            _root.Init(0,this,bounds);
+            _root.Init(0,this,null,bounds);
             
             
         }
@@ -134,6 +102,42 @@ namespace Survivor.Physics
                             {
                                 _queryList.Add(data);
                             }
+                        }
+                    }
+                    else cur.PushBoundsChild(range);
+                }
+                while (_queryNodeStack.Count > 0);
+            }
+
+            return _queryList;
+        }
+
+        public List<T> QueryBounds(Rect range, Func<T,bool> filter)
+        {
+            if (_queryList.Count > 0)
+            {
+                _queryList.Clear();
+            }
+
+            if (_root.Bounds.Overlaps(range))
+            {
+                _queryNodeStack.Push(_root);
+                do
+                {
+                    var cur = _queryNodeStack.Pop();
+                    // 如果是叶子节点 就拿数据
+                    if (cur.IsLeaf)
+                    {
+                        foreach (var data in cur.dataList)
+                        {
+                            if (filter(data))
+                            {
+                                if (range.Overlaps(data.Bounds))
+                                {
+                                    _queryList.Add(data);
+                                }
+                            }
+                            
                         }
                     }
                     else cur.PushBoundsChild(range);
@@ -171,7 +175,7 @@ namespace Survivor.Physics
             {
                 var curNode = _tempProcessStack.Pop();
                 var curNodeCenter = curNode.Bounds.center;
-                MonoHelp.DrawBox(curNode.Bounds.center,
+                MonoHelp.DrawBox(curNodeCenter,
                     new Vector2(curNode.Bounds.width,curNode.Bounds.height),Color.green);
                 //TODO 绘制当前节点
                 if (curNode.IsLeaf)
@@ -265,10 +269,11 @@ namespace Survivor.Physics
             public Node lb, rb, lt, rt;
             public List<T> dataList = new();
             public bool IsLeaf=> lb == null;
-            public void Init(byte depth,QuadTree<T> belongTree,Rect bounds)
+            public void Init(byte depth,QuadTree<T> belongTree,Node father,Rect bounds)
             {
                 this.Depth = depth;
                 this.belongTree = belongTree;
+                this.father = father;
                 this.Bounds = bounds;
                 LooseBounds = new Rect(bounds.x,bounds.y,bounds.width*2,bounds.height*2);
                 
@@ -284,6 +289,11 @@ namespace Survivor.Physics
                 belongTree = null;
                 Bounds = Rect.zero;
                 LooseBounds = Rect.zero;
+                lb = null;
+                rb = null;
+                lt = null;
+                rt = null;
+                dataList.Clear();
             }
 
             /// <summary>
@@ -324,10 +334,10 @@ namespace Survivor.Physics
             /// </summary>
             public void Merge()
             {
-                if (GetChildrenSum() > belongTree.MergeThreshold)
+                /*if (GetChildrenSum() > belongTree.MergeThreshold)
                 {
                     return;
-                }
+                }*/
                 //将子节点的item添加到这个结点中，子节点push到结点池
                 dataList.Clear();
                 foreach (var data in lb.dataList)
@@ -348,13 +358,15 @@ namespace Survivor.Physics
                 }
 
                 belongTree.ReleaseNode(lb);
-                lb = null;
                 belongTree.ReleaseNode(rb);
-                rb = null;
                 belongTree.ReleaseNode(lt);
-                lt = null;
                 belongTree.ReleaseNode(rt);
+                
+                lb = null;
+                rb = null;
+                lt = null;
                 rt = null;
+                
             }
 
             public void ProcessChild()
@@ -394,13 +406,13 @@ namespace Survivor.Physics
                 float subHeight = Bounds.height * 0.5f;
                 //产生子节点
                 lb = belongTree.CreateNode();
-                lb.Init(depth,belongTree,new Rect(Bounds.x,Bounds.y,subWidth,subHeight));
+                lb.Init(depth,belongTree,this,new Rect(Bounds.x,Bounds.y,subWidth,subHeight));
                 rb = belongTree.CreateNode();
-                rb.Init(depth,belongTree,new Rect(Bounds.x + subWidth,Bounds.y,subWidth,subHeight));
+                rb.Init(depth,belongTree,this,new Rect(Bounds.x + subWidth,Bounds.y,subWidth,subHeight));
                 lt = belongTree.CreateNode();
-                lt.Init(depth,belongTree,new Rect(Bounds.x,Bounds.y + subHeight,subWidth,subHeight));
+                lt.Init(depth,belongTree,this,new Rect(Bounds.x,Bounds.y + subHeight,subWidth,subHeight));
                 rt = belongTree.CreateNode();
-                rt.Init(depth,belongTree,new Rect(Bounds.x + subWidth,Bounds.y + subHeight,subWidth,subHeight));
+                rt.Init(depth,belongTree,this,new Rect(Bounds.x + subWidth,Bounds.y + subHeight,subWidth,subHeight));
                 //将父节点所有元素放入子节点
                 foreach (var data in dataList)
                 {
@@ -462,5 +474,34 @@ namespace Survivor.Physics
             void OnRelease();
         }
     }
+
+    
+    [Serializable]
+    public class BvhAgent : IShape
+    {
+        private Rect _bounds;
+        private float2 _position;
+        
+        public bool RemoveTag { get; set; }
+        public Rect Bounds 
+        { 
+            get =>_bounds;
+            set => _bounds = value;
+        }
+
+        public float2 Position
+        {
+            get => _position;
+            set
+            {
+                _position = value;
+                _bounds.center = value;
+            }
+        }
+
+        public CollisionLayer Layer { get; }
+        public CollisionLayer CollideWith { get; }
+    }
+
 
 }

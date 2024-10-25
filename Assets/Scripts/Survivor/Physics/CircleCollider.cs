@@ -1,4 +1,6 @@
+using System;
 using DCFApixels.DragonECS;
+using Service;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -11,11 +13,8 @@ namespace Survivor.Physics
         public float radius;
         public CollisionLayer layer;
         public CollisionLayer collideWith;
-        
         //NoConfig
         public int index;
-        public float2 center;
-        public Bounds Bounds;
         public override int GetHashCode() {
             return index;
         }
@@ -23,5 +22,10 @@ namespace Survivor.Physics
         public bool Equals(CircleCollider other) {
             return other.index == index;
         }
+    }
+    
+    [Serializable]
+    class CircleColliderTemplate : ComponentTemplate<CircleCollider>
+    {
     }
 }

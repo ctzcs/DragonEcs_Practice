@@ -18,8 +18,9 @@ namespace Utility
         }
         public static void DrawBox(Vector3 center, Vector2 size, Color color)
         {
+#if UNITY_EDITOR
             _gizmosManager.AddCommand(_gizmosManager.Get<DrawBoxGizmos>().Set(center,size,color));
-            
+#endif
         }
 
         private static GameObject New(string name)

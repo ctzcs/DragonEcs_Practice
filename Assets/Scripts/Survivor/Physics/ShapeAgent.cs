@@ -1,37 +1,27 @@
 ﻿using System;
 using DCFApixels.DragonECS;
+using Service;
 using Unity.Mathematics;
 using UnityEngine;
 
 namespace Survivor.Physics
 {
+    //Bvh组件
     [MetaGroup("Survivor/Physics")]
     [Serializable]
-    public struct ShapeAgent:IEcsComponent
+    public struct PhysicsBvhAgent:IEcsComponent
     {
-        public EShape type;
-        [SerializeReference]
-        public IShape agent;
+        public Rect bounds;
+        //和oop交互
+        public BvhAgent agent;
     }
 
     [Serializable]
-    class ShapeAgentTemplate : ComponentTemplate<ShapeAgent>
+    class ShapeAgentTemplate : ComponentTemplate<PhysicsBvhAgent>
     {
-    }
-
-    [MetaGroup("Survivor/Physics")]
-    [Serializable]
-    public struct PhysicsLayer:IEcsComponent
-    {
-        public CollisionLayer layer;
-        public CollisionLayer collideWith;
     }
     
-    [Serializable]
-    class PhysicsLayerTemplate : ComponentTemplate<PhysicsLayer>
-    {
-    }
-
+    
     public enum EShape
     {
         Box,

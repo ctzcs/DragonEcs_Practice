@@ -1,5 +1,6 @@
 ﻿using Base;
 using DCFApixels.DragonECS;
+using Survivor.Physics;
 
 namespace GameOne.Ecs
 {
@@ -15,6 +16,7 @@ namespace GameOne.Ecs
                 .AddModule(new GodModule())
                 .AddModule(new SceneModule())
                 .AddModule(new GameAbilityModule());
+
         }
     }
 }

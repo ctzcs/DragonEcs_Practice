@@ -6,6 +6,8 @@ using GameOne.Ecs.Input;
 using GameOne.Ecs.Z_UnitTest;
 using GameOne.Service;
 using Survivor.Global;
+using Survivor.Physics;
+using Survivor.Service;
 using UnityEngine;
 using UnityEngine.UI;
 using Time = UnityEngine.Time;
@@ -32,6 +34,8 @@ namespace GameOne
         
         private TimeService _timeService;
         private GameService gameService;
+        private ServiceHub _serviceHub;
+        
         private float _elapsedTime;
         // Start is called before the first frame update
         
@@ -41,6 +45,7 @@ namespace GameOne
             _eventWorld = new EcsEventWorld();
             _timeService = new TimeService();
             gameService = new GameService();
+            _serviceHub = new ServiceHub();
             gameService.SetMode(EGameMode.LevelMode);
             var e = _world.NewEntity();
             _world.DelEntity(e);
@@ -50,10 +55,12 @@ namespace GameOne
                 .Inject(_eventWorld)
                 .Inject(_timeService)
                 .Inject(gameService)
+                .Inject(_serviceHub)
                 .AddModule(new GlobalModule())
                 .AddModule(new InputModule())
                 .AddModule(new GameModule())
                 .AddModule(new ViewModule())
+                
                 .AddModule(new UnitTestModule())
 #if UNITY_EDITOR
                 .AddUnityDebug(_world,_eventWorld)
@@ -64,7 +71,7 @@ namespace GameOne
 #if UNITY_EDITOR          
             UnityDebugService.Activate();
 #endif
-            _timeService.fixedDeltaTime = 1f;
+            _timeService.fixedDeltaTime = 0.05f;
             //自定义的更新函数
            
             /*_updateRunner = _pipline.GetRunnerInstance<EcsUpdateRunner>();*/

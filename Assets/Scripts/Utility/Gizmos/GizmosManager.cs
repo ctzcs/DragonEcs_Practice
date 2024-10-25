@@ -1,24 +1,48 @@
 ﻿using System;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
+using UnityEditor;
 using UnityEngine;
 
 namespace Utility.Gizmos
 {
     public class GizmosManager:MonoBehaviour
     {
+        private static int count;
+        [ShowInInspector]
+        private readonly List<IGizmosCommand> _tempAddCommands = new();
+        [ShowInInspector]
         private readonly List<IGizmosCommand> _commands = new();
+        [ShowInInspector]
         private readonly Dictionary<Type,Queue<IGizmosCommand>> _commandPool = new();
-        public bool IsOpen { get; set; }
-        
+
+        private bool _isOpen;
+        public bool IsOpen
+        {
+            get => _isOpen;
+            set => _isOpen = value;
+        }
+
         private void OnDrawGizmos()
         {
             if (!IsOpen)return;
+            if (_tempAddCommands.Count > 0)
+            {
+                foreach (var cmd in _commands)
+                {
+                    ReturnToPool(cmd);
+                }
+                _commands.Clear();
+                _commands.AddRange(_tempAddCommands);
+                _tempAddCommands.Clear();
+            }
+            
             foreach (var gizmos in _commands)
             {
                 gizmos.Draw();
-                ReturnToPool(gizmos);
+                //ReturnToPool(gizmos);
             }
-            _commands.Clear();
+            
         }
 
         public void Init()
@@ -28,7 +52,11 @@ namespace Utility.Gizmos
         
         public void AddCommand<T>(T cmd) where T : IGizmosCommand
         {
-            _commands.Add(cmd);
+            if (!IsOpen||cmd == null)
+            {
+                return;
+            }
+            _tempAddCommands.Add(cmd);
         }
         
         public T Get<T>() where T:class,IGizmosCommand,new()
@@ -51,6 +79,13 @@ namespace Utility.Gizmos
                 
             }
             pool.Enqueue(cmd);
+        }
+
+
+        private static bool IsGizmosEnable()
+        {
+            var sceneView = SceneView.lastActiveSceneView;//.drawGizmos;
+            return sceneView != null && sceneView.drawGizmos;
         }
     }
 

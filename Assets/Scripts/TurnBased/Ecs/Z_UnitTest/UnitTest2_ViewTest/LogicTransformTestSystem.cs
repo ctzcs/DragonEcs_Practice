@@ -20,7 +20,7 @@ namespace GameOne.Ecs.Z_UnitTest
                 
                     ref var logicTransform = ref entity.Get(pools.velPos);
 
-                    Vector3 offset = Random.insideUnitSphere;
+                    Vector3 offset = Random.insideUnitSphere * 0.5f;
                     offset.z = 0;
                     logicTransform.position += offset;
                     logicTransform.scaleRate = Random.Range(0, 1f);

@@ -28,7 +28,7 @@ namespace GameOne.Ecs.Z_UnitTest
                 
                 //链接GameObject
                 GameObject catInstance = UnityEngine.Object.Instantiate(cat);
-                entity.Connect(catInstance,false);
+                entity.Connect(catInstance,true);
                 
                 VelPos logicTransform = new VelPos()
                 {
