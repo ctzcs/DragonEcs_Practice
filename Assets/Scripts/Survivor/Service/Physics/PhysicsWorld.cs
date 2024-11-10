@@ -10,13 +10,15 @@ namespace Service
         private QuadTree<IShape> _quadTree;
         
         private Dictionary<int,IShape> _agents;
+
+        private List<IShape> _collisionAgents;
         public void Init()
         {
             _quadTree = new QuadTree<IShape>();
             _quadTree.Init(6,new Rect(-10,-10,20,20));
 
             _agents = new Dictionary<int,IShape>();
-            
+            _collisionAgents = new();
         }
 
         public void Add(int ent,IShape agent)
@@ -42,6 +44,10 @@ namespace Service
             _quadTree.Update();
             
             //发出碰撞事件
+            foreach (var shape in _agents.Values)
+            {
+                _quadTree.QueryBounds(shape.Bounds, (data) => IsCollideWithLayer(shape.CollideWith, data.Layer));
+            }
             
         }
         
@@ -108,6 +114,22 @@ namespace Service
         /// </summary>
         public static void OverlapCircle(){}
         
+        
+    }
+
+
+    public class ContactManager
+    {
+        
+    }
+    
+    public class Contact
+    {
+        
+    }
+
+    public class ContactListener
+    {
         
     }
     

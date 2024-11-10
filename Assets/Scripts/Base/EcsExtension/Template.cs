@@ -28,7 +28,7 @@ namespace Base
 
         #endregion
 
-        public static T Copy<T>(T template) where T:Object,ITemplate
+        public static T Copy<T>(T template) where T:Object
         {
             return Object.Instantiate(template);
         }

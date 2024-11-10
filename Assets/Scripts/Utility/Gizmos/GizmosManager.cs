@@ -16,6 +16,7 @@ namespace Utility.Gizmos
         [ShowInInspector]
         private readonly Dictionary<Type,Queue<IGizmosCommand>> _commandPool = new();
 
+        [ShowInInspector]
         private bool _isOpen;
         public bool IsOpen
         {
