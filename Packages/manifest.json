@@ -2,6 +2,7 @@
   "dependencies": {
     "com.dcfa_pixels.dragonecs": "https://github.com/DCFApixels/DragonECS.git",
     "com.dcfa_pixels.dragonecs-auto_injections": "https://github.com/DCFApixels/DragonECS-AutoInjections.git",
+    "com.dcfa_pixels.dragonecs-recursivity": "https://github.com/DCFApixels/DragonECS-Recursivity.git",
     "com.dcfa_pixels.dragonecs-unity": "https://github.com/DCFApixels/DragonECS-Unity.git",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.2d.tilemap": "1.0.0",
