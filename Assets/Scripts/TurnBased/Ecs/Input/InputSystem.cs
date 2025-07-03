@@ -5,8 +5,8 @@ namespace GameOne.Ecs.Input
 {
     public class InputSystem:IEcsInit,IEcsRun
     {
-        [EcsInject]private EcsDefaultWorld _world;
-        [EcsInject] private EcsEventWorld _eventWorld;
+        [DI]private EcsDefaultWorld _world;
+        [DI] private EcsEventWorld _eventWorld;
         
         public void Init()
         {

@@ -1,4 +1,5 @@
 ﻿using DCFApixels.DragonECS;
+using DCFApixels.DragonECS.Core;
 
 namespace Survivor.Global
 {

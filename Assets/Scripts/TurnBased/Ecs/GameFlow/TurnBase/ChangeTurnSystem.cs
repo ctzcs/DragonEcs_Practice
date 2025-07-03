@@ -6,9 +6,9 @@ namespace GameOne.Ecs
 {
     public class ChangeTurnSystem : IEcsFixedRunProcess
     {
-        [EcsInject]EcsDefaultWorld _world;
-        [EcsInject]EcsEventWorld _eWorld;
-        [EcsInject]GameService game;
+        [DI]EcsDefaultWorld _world;
+        [DI]EcsEventWorld _eWorld;
+        [DI]GameService game;
 
         class Aspect:EcsAspect
         {

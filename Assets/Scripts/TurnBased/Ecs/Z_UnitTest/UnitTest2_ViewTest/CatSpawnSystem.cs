@@ -8,8 +8,8 @@ namespace GameOne.Ecs.Z_UnitTest
 {
     public class CatSpawnSystem : IEcsInit
     {
-        [EcsInject] EcsDefaultWorld _world;
-        private int _entityCount = 200;
+        [DI] EcsDefaultWorld _world;
+        private int _entityCount = 1000;
         public void Init()
         {
             ViewTest();

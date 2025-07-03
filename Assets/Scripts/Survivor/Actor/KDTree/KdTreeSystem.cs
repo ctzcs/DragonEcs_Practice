@@ -10,7 +10,7 @@ namespace Survivor.Actor
 {
     public class KdTreeSystem:IEcsInit,IEcsFixedRunProcess
     {
-        [EcsInject]private EcsDefaultWorld _world;
+        [DI]private EcsDefaultWorld _world;
         public void Init()
         {
             entlong god = _world.God();

@@ -12,8 +12,8 @@ namespace GameOne.Ecs
     /// </summary>
     public class UpdateViewSystem : IEcsFixedRunProcess,IEcsRun
     {
-        [EcsInject] EcsDefaultWorld _world;
-        [EcsInject] TimeService _timeService;
+        [DI] EcsDefaultWorld _world;
+        [DI] TimeService _timeService;
         class Aspect:EcsAspect
         {
             public EcsPool<View> View = Inc;

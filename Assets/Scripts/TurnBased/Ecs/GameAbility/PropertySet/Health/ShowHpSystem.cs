@@ -5,7 +5,7 @@ namespace GameOne.Ecs
 {
     public class ShowHpSystem:IEcsRun
     {
-        [EcsInject]EcsDefaultWorld _world;
+        [DI]EcsDefaultWorld _world;
         
         public void Run()
         {

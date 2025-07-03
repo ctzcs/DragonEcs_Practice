@@ -6,7 +6,7 @@ namespace GameOne.Ecs
 {
     public class ShowItemsSystem:IEcsRun
     {
-        [EcsInject]private EcsDefaultWorld _world;
+        [DI]private EcsDefaultWorld _world;
         public void Run()
         {
             foreach (var player in _world.Where(out PlayerAspect playerAspect))

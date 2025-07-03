@@ -4,8 +4,8 @@ namespace GameOne.Ecs
 {
     public class HealthChangeSystem:IEcsFixedRunProcess
     {
-        [EcsInject] private EcsDefaultWorld _world;
-        [EcsInject] private EcsEventWorld _eWorld;
+        [DI] private EcsDefaultWorld _world;
+        [DI] private EcsEventWorld _eWorld;
         class DamageEventAspect:EcsAspect
         {
             public EcsPool<HealthChangeEvent> DamageEventPool = Inc;

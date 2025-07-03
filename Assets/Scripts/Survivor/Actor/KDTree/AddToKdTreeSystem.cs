@@ -7,7 +7,7 @@ namespace Survivor.Actor
 {
     public class AddToKdTreeSystem:IEcsFixedRunProcess
     {
-        [EcsInject] private EcsDefaultWorld _world;
+        [DI] private EcsDefaultWorld _world;
         class Aspect:EcsAspect
         {
             public EcsPool<Evt_AddToKdTree> AddToKdTree = Inc;

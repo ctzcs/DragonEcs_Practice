@@ -6,7 +6,7 @@ namespace GameOne.Ecs
 {
     public class SpawnSystem:IEcsInit
     {
-        [EcsInject]EcsDefaultWorld _world;
+        [DI]EcsDefaultWorld _world;
         private EcsPool<Health> _healthPool;
         private EcsPool<Name> _namePool;
         public void Init()

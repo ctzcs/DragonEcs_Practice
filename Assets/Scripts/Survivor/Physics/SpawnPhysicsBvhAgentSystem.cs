@@ -13,9 +13,9 @@ namespace Survivor.Physics
     /// </summary>
     public class SpawnPhysicsBvhAgentSystem:IEcsFixedRunProcess
     {
-        [EcsInject]
+        [DI]
         private EcsDefaultWorld _world;
-        [EcsInject]
+        [DI]
         private ServiceHub _hub;
         class BoxColliderAspect:EcsAspect
         {

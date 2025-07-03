@@ -5,7 +5,7 @@ namespace Survivor.Physics
 {
     public class PhysicsSystem:IEcsInit,IEcsFixedRunProcess
     {
-        [EcsInject] private ServiceHub _serviceHub;
+        [DI] private ServiceHub _serviceHub;
         
         public void Init()
         {

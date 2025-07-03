@@ -9,7 +9,7 @@ namespace GameOne.Ecs
     public class RefreshTagInfluenceByBuffSystem<T> : IEcsFixedRunProcess 
         where T :struct,IEcsTagComponent
     {
-        [EcsInject] EcsDefaultWorld _world;
+        [DI] EcsDefaultWorld _world;
 
         public void FixedRun()
         {

@@ -6,7 +6,7 @@ namespace Survivor.Global
 {
     public class InitGameSystem:IEcsInit
     {
-        [EcsInject]private EcsDefaultWorld _world;
+        [DI]private EcsDefaultWorld _world;
         public void Init()
         {
             var god = Object.Instantiate(Resources.Load<ScriptableEntityTemplate>("Survivor/God"));

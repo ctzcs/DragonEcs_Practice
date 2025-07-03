@@ -7,9 +7,9 @@ namespace GameOne.Ecs
 {
     public class GodSystem:IEcsInit,IEcsFixedRunProcess
     {
-        [EcsInject]EcsDefaultWorld _world;
-        [EcsInject]EcsEventWorld _eventWorld;
-        [EcsInject] private GameService service;
+        [DI]EcsDefaultWorld _world;
+        [DI]EcsEventWorld _eventWorld;
+        [DI] private GameService service;
         private EcsPool<Health> _healthPool;
         private EcsPool<Name> _namePool;
         private EcsPool<GameObjectConnect> _connectPool;

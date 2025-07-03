@@ -26,7 +26,8 @@ namespace Utility
         private static GameObject New(string name)
         {
             var go = new GameObject(name);
-            go.transform.SetParent(_root.transform);
+            if(_root != null)
+                go.transform.SetParent(_root.transform);
             return go;
         }
     }

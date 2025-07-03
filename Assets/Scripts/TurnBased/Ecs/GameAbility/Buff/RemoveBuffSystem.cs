@@ -9,8 +9,8 @@ namespace GameOne.Ecs
     /// <typeparam name="T"></typeparam>
     public class RemoveBuffSystem : IEcsFixedRunProcess
     {
-        [EcsInject] EcsDefaultWorld _world;
-        [EcsInject] EcsEventWorld _eWorld;
+        [DI] EcsDefaultWorld _world;
+        [DI] EcsEventWorld _eWorld;
         class Aspect:EcsAspect
         {
             public EcsPool<BelongEntity> belongPool = Inc;

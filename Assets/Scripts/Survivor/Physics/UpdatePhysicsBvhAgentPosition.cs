@@ -11,7 +11,7 @@ namespace Survivor.Physics
     /// </summary>
     public class UpdatePhysicsBvhAgentPosition:IEcsFixedRunProcess
     {
-        [EcsInject]
+        [DI]
         private EcsDefaultWorld _world;
         class Aspect:EcsAspect
         {

@@ -5,7 +5,7 @@ namespace GameOne.Ecs
 {
     public class DeathSystem:IEcsFixedRunProcess
     {
-        [EcsInject] private EcsEventWorld _world;
+        [DI] private EcsEventWorld _world;
         
         class Aspect:EcsAspect
         {

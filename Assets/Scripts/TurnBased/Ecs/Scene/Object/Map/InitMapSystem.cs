@@ -5,8 +5,8 @@ namespace GameOne.Ecs
 {
     public class InitMapSystem : IEcsFixedRunProcess
     {
-        [EcsInject] private EcsDefaultWorld _world;
-        [EcsInject]private EcsEventWorld _eWorld;
+        [DI] private EcsDefaultWorld _world;
+        [DI]private EcsEventWorld _eWorld;
 
         class Aspect:EcsAspect
         {
@@ -19,7 +19,8 @@ namespace GameOne.Ecs
             {
                 var newMap = _world.NewEntity();
                 ref var createMapEvent = ref aspect.createMapEvents.Get(id);
-                _world.GetTagPool<MapTag>().Add(newMap);
+                _world.GetPool<MapTag>().Add(newMap);
+                
                 ref MapModel mapModel = ref _world.GetPool<MapModel>().Add(newMap);
                 mapModel.Set(createMapEvent.width,createMapEvent.height);
                 

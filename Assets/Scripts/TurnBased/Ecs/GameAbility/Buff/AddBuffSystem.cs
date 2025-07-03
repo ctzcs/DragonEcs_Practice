@@ -9,8 +9,8 @@ namespace GameOne.Ecs
     /// </summary>
     public class AddBuffSystem : IEcsFixedRunProcess
     {
-        [EcsInject] EcsDefaultWorld _world;
-        [EcsInject] private EcsEventWorld _eWorld;
+        [DI] EcsDefaultWorld _world;
+        [DI] private EcsEventWorld _eWorld;
 
         class Aspect:EcsAspect
         {

@@ -10,7 +10,7 @@ namespace GameOne.Ecs.Z_UnitTest
 {
     public class MouseQueryTestSystem:IEcsInit,IEcsFixedRunProcess,IEcsRun
     {
-        [EcsInject] private EcsDefaultWorld _world;
+        [DI] private EcsDefaultWorld _world;
         private List<int> index;
         
         public void Init()

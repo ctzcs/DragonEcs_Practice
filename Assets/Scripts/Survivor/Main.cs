@@ -1,14 +1,11 @@
-﻿using System;
+﻿
 using DCFApixels.DragonECS;
+using Share.Input;
+using Share.Test;
 using Survivor.GameLogic;
 using Survivor.Global;
-using Survivor.Input;
-using Survivor.Physics;
 using Survivor.Service;
-using Survivor.Test;
 using UnityEngine;
-using Utility;
-using Time = Survivor.Global.Time;
 using ViewModule = Survivor.View.ViewModule;
 
 namespace Survivor
@@ -32,7 +29,7 @@ namespace Survivor
                 .AddModule(new BattleModule())
                 .AddModule(new ViewModule())
 #if UNITY_EDITOR
-                .AddModule(new TestModule())
+                .AddModule(new TestModule("Survivor/TestModuleConfig"))
                 .AddUnityDebug(_world)
                 
 #endif

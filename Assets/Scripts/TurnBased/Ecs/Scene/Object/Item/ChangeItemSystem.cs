@@ -7,8 +7,8 @@ namespace GameOne.Ecs
 {
     public class ChangeItemSystem:IEcsFixedRunProcess
     {
-        [EcsInject]private EcsDefaultWorld _defaultWorld;
-        [EcsInject]private EcsEventWorld _eventWorld;
+        [DI]private EcsDefaultWorld _defaultWorld;
+        [DI]private EcsEventWorld _eventWorld;
         class ChangeItemAspect:EcsAspect
         {
             public EcsPool<ChangeItemEvent> changeItemEventPool = Inc;

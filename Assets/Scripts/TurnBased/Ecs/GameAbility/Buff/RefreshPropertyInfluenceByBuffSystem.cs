@@ -13,8 +13,8 @@ namespace GameOne.Ecs
         where TProperty:struct,IEcsComponent,IAddable<TBuffMod>,ISubtract<TBuffMod>
         where TBuffMod:struct,IEcsComponent
     {
-        [EcsInject] EcsDefaultWorld _world;
-        [EcsInject] private EcsEventWorld _eWorld;
+        [DI] EcsDefaultWorld _world;
+        [DI] private EcsEventWorld _eWorld;
         
         class Aspect:EcsAspect
         {

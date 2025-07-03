@@ -8,7 +8,7 @@ namespace Survivor.GameLogic
         public void Import(EcsPipeline.Builder b)
         {
             b.Add(new InitBattleSystem())
-                .Add(new PhysicsSystem());
+                /*.Add(new PhysicsSystem())*/;
         }
     }
 }

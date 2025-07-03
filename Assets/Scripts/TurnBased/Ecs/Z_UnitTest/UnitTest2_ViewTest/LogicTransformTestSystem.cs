@@ -7,7 +7,7 @@ namespace GameOne.Ecs.Z_UnitTest
 {
     public class LogicTransformTestSystem : IEcsFixedRunProcess
     {
-        [EcsInject] EcsDefaultWorld _world;
+        [DI] EcsDefaultWorld _world;
         class Aspect:EcsAspect
         {
             public EcsPool<VelPos> velPos = Inc;

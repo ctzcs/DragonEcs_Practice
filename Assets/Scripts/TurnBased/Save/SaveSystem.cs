@@ -12,9 +12,9 @@ namespace GameOne
 {
     public class SaveSystem:IEcsFixedRunProcess
     {
-        [EcsInject] private EcsDefaultWorld _world;
-        [EcsInject] private TimeService _timeService;
-        [EcsInject] private GameService gameService;
+        [DI] private EcsDefaultWorld _world;
+        [DI] private TimeService _timeService;
+        [DI] private GameService gameService;
         class Aspect:EcsAspect
         {
             public EcsTagPool<PlayerTag> playerTags = Inc;

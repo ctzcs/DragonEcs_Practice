@@ -10,9 +10,9 @@ namespace GameOne.Ecs.Z_UnitTest
     /// </summary>
     public class UnitTest1:IEcsRun
     {
-        [EcsInject]private EcsDefaultWorld _world;
-        [EcsInject]private EcsEventWorld _eWorld;
-        [EcsInject] private GameService _gameService;
+        [DI]private EcsDefaultWorld _world;
+        [DI]private EcsEventWorld _eWorld;
+        [DI] private GameService _gameService;
 
         class Aspect:EcsAspect
         {

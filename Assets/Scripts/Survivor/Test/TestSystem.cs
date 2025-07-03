@@ -1,15 +1,15 @@
 ﻿using System;
-using Base;
 using DCFApixels.DragonECS;
+using Share.Input;
 using Survivor.Global;
-using Survivor.Input;
+
 
 namespace Survivor.Test
 {
     [Serializable]
     public class TestSystem:IEcsFixedRunProcess,IEcsRun
     {
-        [EcsInject]
+        [DI]
         private EcsDefaultWorld _world;
 
         class Aspect:EcsAspect
@@ -40,7 +40,7 @@ namespace Survivor.Test
             //EcsDebug.Print(_world.Get<WorldData>().god.Read<God>().name);
             if (input.WasPressed(EKeyCode.A))
             {
-                if (input.WasDown(EKeyCode.W))
+                if (input.WasPressedThisFrame(EKeyCode.W))
                 {
                     EcsDebug.Print(input.GetRecord(EKeyCode.W).WasPressedInThisFrame);
                     EcsDebug.Print("按下A后按下W"); 

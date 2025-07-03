@@ -2,23 +2,14 @@
     "name": "Map",
     "maps": [
         {
-            "name": "New action map",
-            "id": "3efd30f4-047c-4494-bcd4-4e8dab838d9c",
+            "name": "UI",
+            "id": "e95ff827-2582-44c1-a382-72e24a42c4e0",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "Cancel",
                     "type": "Button",
-                    "id": "ab087bd7-4c4e-49d0-a837-ee12fec7db56",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "New action1",
-                    "type": "Button",
-                    "id": "516b8b99-3347-4a2d-865c-9a40715fa465",
-                    "expectedControlType": "Button",
+                    "id": "602692a3-39da-4bdd-a270-420342453a87",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -27,23 +18,12 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "3a1d7b04-234a-4a2f-a47f-59feb8740854",
-                    "path": "<Mouse>/leftButton",
+                    "id": "3b404b4f-19e0-4250-8d70-cb4a4b751c01",
+                    "path": "<Keyboard>/{Cancel}",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard",
-                    "action": "New action",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "26429054-02d7-4a2a-bf68-84c61e5f93fd",
-                    "path": "<Keyboard>/anyKey",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "New action1",
+                    "groups": ";Keyboard",
+                    "action": "Cancel",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
